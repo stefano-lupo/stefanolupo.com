@@ -66,6 +66,9 @@
 						<li>
 							<a class="page-scroll" href="portfolio.php">Portfolio</a>
 						</li>
+						<li>
+							<a class="page-scroll" href="/blog">Blog</a>
+						</li>
 
 					</ul>
 

@@ -1,0 +1,111 @@
+@font-face {
+    font-family: "dolce-vita-light";
+    src: url('../fonts/dolce-vita/dolce-vita-light.ttf');
+}
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+.portfolio-content {
+    display: none;
+}
+
+#portfolio-content h2{
+	font-size:180%;
+}
+@media(min-width:992px) {
+    .portfolio-content h2,
+    .portfolio-content h3 {
+        text-align: left;
+    }
+}
+.portfolio-box {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    border: solid 2px rgba(0, 0, 0, 0.7);
+}
+@media(max-width:1279px) {
+    .portfolio-box .portfolio-box-caption {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.7);
+        opacity: 1;
+    }
+}
+@media(min-width:1280px) {
+    /* Initially hidden - text with darkened background */
+    .portfolio-box .portfolio-box-caption {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: #fff;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    /* On Hover show text and darken background */
+    .portfolio-box:hover .portfolio-box-caption {
+        opacity: 1;
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+    /* Also Blur if available */
+    .portfolio-box:hover img {
+        -webkit-filter: blur(4px);
+        -webkit-transition: all 1.5s ease;
+        transition: all 1.5s ease;
+    }
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    padding: 0 15px;
+    font-family: dolce-vita-light;
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-size: 18px;
+}
+@media(min-width:768px) {
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+        font-size: 16px;
+    }
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+        font-size: 22px;
+    }
+}
+.no-gutter > [class*=col-] {
+    padding: 1%;
+}
+.no-padding {
+    padding: 0;
+}
+.pad-bottom {
+    padding-bottom: 50px;
+}
+#phil-lilac {
+    color: rgba(203, 173, 255, .7);
+}

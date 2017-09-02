@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: 
+Disallow: /generic
+Disallow: clients.php
+

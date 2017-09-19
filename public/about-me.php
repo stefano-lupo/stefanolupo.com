@@ -110,7 +110,7 @@
 						</div>
 						<div class="col-xs-8 col-md-10">
 							<p>
-								21
+								22
 							</p>
 						</div>
 					</div>
@@ -122,7 +122,7 @@
 						</div>
 						<div class="col-xs-8 col-md-10">
 							<p>
-								Web Developer
+								Software Engineer
 							</p>
 						</div>
 					</div>
@@ -144,6 +144,7 @@
 		</section>
 
 		<section class="container-fluid larger-container" id="proficiencies">
+			<h2>Web Technologies</h2>
 			<div class="row equal">
 				<div class="col-md-4">
 					<div class="card">

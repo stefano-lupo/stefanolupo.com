@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,300italic&subset=latin,greek);
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
 html {
     width: 100%;
     height: 100%;
@@ -178,6 +179,12 @@ a:hover {
 }
 .text-right {
     text-align: right;
+}
+.subtitle {
+  font-size: 80%;
+  font-style: italic;
+  text-align: center;
+  margin-top: 10px;
 }
 
 /************* fonts ***********************************/
@@ -768,6 +775,11 @@ footer .text-muted {
 footer hr {
     border-color: white;
 }
+.chez-sara {
+  font-family: 'Tangerine', cursive;
+  color: white;
+  font-size: 250%;
+}
 
 /*************** Social Media Icons ****************/
 
@@ -875,7 +887,7 @@ header span{
 	header h1{
 		font-size:200%;
 	}
-	
+
 	header span{
 		font-size:45%;
 	}

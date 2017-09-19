@@ -61,10 +61,16 @@
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-left">
 						<li>
-							<a href="about-me.php">About Me</a>
+							<a href="index.php">Home</a>
+						</li>
+						<li>
+							<a href="web-design.php">Web Design</a>
 						</li>
 						<li>
 							<a class="current-page" href="portfolio.php">Portfolio</a>
+						</li>
+						<li>
+							<a  href="/blog">Blog</a>
 						</li>
 					</ul>
 
@@ -156,7 +162,7 @@
 										</p>
 									</div>
 								</div>-->
-				
+
 			</div>
 
 			<div id="sweeneyprogolf" class="container-fluid larger-container portfolio-content">
@@ -189,7 +195,7 @@
 										</p>
 									</div>
 								</div>-->
-				
+
 			</div>
 
 			<div id="westbury" class="container-fluid larger-container portfolio-content">

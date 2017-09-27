@@ -182,7 +182,7 @@
 
 			<br>
 
-			<span>Programming, Engineering and other Interesting Things</span></h1>
+			<span>Programming, Tech and Other Interesting Things</span></h1>
 
 			<a href="#page-content" class="page-scroll">
 

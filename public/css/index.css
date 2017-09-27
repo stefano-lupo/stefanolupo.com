@@ -723,6 +723,7 @@ footer #footer-text {
     padding-top: 1%;
     padding-bottom: 3%;
     text-align: center;
+    font-size: 100%;
     color: rgba(255, 255, 255, .9);
 }
 footer img {
@@ -752,6 +753,7 @@ footer #email-column {
 }
 #reach-me p {
     text-align: left;
+    font-size: 90%;
 }
 @media(min-width:992px) and (max-width:1500px) {
     #reach-me p {

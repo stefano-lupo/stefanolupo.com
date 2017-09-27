@@ -53,9 +53,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://stefanolupo.tech/blog"></form>
@@ -117,22 +117,20 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd /var/www/websockets/server</div><div class="line">$ npm init</div></pre></td></tr></table></figure>
 <p>Follow along in the initialization process to create your <em>package.json</em> file (although what you actually type has little importance). Finally install <em>websocket-node</em> using the following: </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># Again, either use sudo, or chown the websockets directory</div><div class="line">$ npm install websocket --save</div></pre></td></tr></table></figure>
-<h1 id="Creating-the-WebSocket-Chat-Server"><a href="#Creating-the-WebSocket-Chat-Server" class="headerlink" title="Creating the WebSocket Chat Server"></a>Creating the WebSocket Chat Server</h1><h2 id="Server-Side-Code"><a href="#Server-Side-Code" class="headerlink" title="Server Side Code"></a>Server Side Code</h2><p>Finally it was time to write some code. I decided to work on the server side code first. The first step is to set up a standard Node HTTP server.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var http = require(&apos;http&apos;);</div><div class="line">var server = http.createServer(function (request, response) &#123; </div><div class="line">    response.end(&quot;Hello from Node&quot;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p>Browse to <a href="http://localhost:3000" target="_blank" rel="external">http://localhost:3000</a> and you should be greeted with a message. Once we’re happy that works we can remove our request handler entirely as it is not needed.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var http = require(&apos;http&apos;);</div><div class="line">var server = http.createServer(function (request, response) &#123;&#125;);</div></pre></td></tr></table></figure>
+<h1 id="Creating-the-WebSocket-Chat-Server"><a href="#Creating-the-WebSocket-Chat-Server" class="headerlink" title="Creating the WebSocket Chat Server"></a>Creating the WebSocket Chat Server</h1><h2 id="Server-Side-Code"><a href="#Server-Side-Code" class="headerlink" title="Server Side Code"></a>Server Side Code</h2><p>Finally it was time to write some code. I decided to work on the server side code first. The first step is to set up a standard Node HTTP server.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var http = require(&apos;http&apos;);</div><div class="line">var server = http.createServer(function (request, response) &#123;&#125;);</div></pre></td></tr></table></figure></p>
 <p>Next we need to specify a free port on which the server can listen. I picked 3000 as I had already portforwarded that port to my Raspberry Pi on my router. Portforwarding allows your router to forward incoming packets at the specified port, to a specified machine on your local network. It looks something like this:</p>
 <p><strong><em>http://&lt;Router’s IP&gt;:3000    —&gt;    Router    —&gt;    Server on Raspberry Pi Listening on port 3000</em></strong></p>
-<p>Since I had port forwarded port 3000 to point to my Raspberry Pi, the router then forwards those packets onto my Raspberry Pi allowing my server to be connected to from anywhere.</p>
-<p>So telling out HTTP server to listen on port 3000<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">server.listen(3000, function () &#123;</div><div class="line">    console.log(&apos;Server is listening on port 3000&apos;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p>Next we can create a WebSocket Server and connect it up to our HTTP server. This is what gives us our low latency, long held client-server connection, as opposed to standard HTTP which makes requires a fresh HTTP request everytime we wish to update.</p>
+<p>Since I had port forwarded port 3000 to point to my Raspberry Pi, the router then forwards those packets onto my Raspberry Pi allowing my server to be connected to from outside of my local network.</p>
+<p>So telling our HTTP server to listen on port 3000:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">server.listen(3000, function () &#123;</div><div class="line">    console.log(&apos;Server is listening on port 3000&apos;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>Next we can create a WebSocket Server and connect it up to our HTTP server by passing the HTTP server to the constructor. This <code>WebSocket</code> is what gives us our long held client-server connection, as opposed to standard HTTP which requires a fresh HTTP request everytime we wish to update.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var WebSocketServer = require(&apos;websocket&apos;).server;</div><div class="line">wsServer = new WebSocketServer(&#123; httpServer: server &#125;);</div></pre></td></tr></table></figure>
 <p>Next we need some way of keeping track of our clients and the messages that have been sent. As I was just doing this for fun I didn’t implement anything fancy for storing the messages (no not even file IO - but I was doing this from my phone after all…). I ended up just storing the messages in an array which obviously isn’t a good idea, but it works in the short term.</p>
 <p>So we need three variables, one to use as clients IDs, a Map to hold our clients which can be indexed by the ID and an array of sent messages.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var id = 0;</div><div class="line">var clients = new Map();</div><div class="line">var messages = [];</div></pre></td></tr></table></figure>
 <p>Next we define the callback to executed when a client attempts to connect to the server. Upon receiving a request, we have the option to accept or reject the client. All are welcome on my chat server so I just accepted any incoming connections. I assign the new client the next ID and increment the ID so it’s ready for the next client, add the client to our clients Map and log out a small message to the terminal so we can see when clients have joined. Finally we will send all the old messages to the newly connected client. Note that the sendUTF method obviously only works with strings, but since were using JSON, a simple <code>JSON.stringify()</code> takes care of that and the data can be recovered using <code>JSON.parse()</code> on the other side.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">wsServer.on(&apos;request&apos;, function (request) &#123;</div><div class="line">    // Envoked when client connects, send them all previous messages</div><div class="line">    var connection = request.accept(&apos;echo-protocol&apos;, request.origin);</div><div class="line">    connection.id = id++;</div><div class="line">    clients.set(id, connection);</div><div class="line">    console.log((new Date()) + &apos; Connection accepted [&apos; + connection.id + &apos;]&apos;);</div><div class="line"></div><div class="line">    // Send old messages to client</div><div class="line">    connection.sendUTF(JSON.stringify(messages));</div><div class="line"></div><div class="line">    // More code to go here soon..</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>Finally we need to define a couple more callbacks for when a client sends a message (or rather, when the server receives a message) and when the client disconnects. WebSockets make this really simple with the <code>on(&#39;message&#39;, callback)</code> and <code>on(&#39;close&#39;, callback)</code> respectively. Upon (the server) receiving a message, we want to save the message and broadcast that message to all connected clients. Ideally, we wouldn’t send this back to client who sent it and just update the sender’s client side messages, but as this was just a quick imthenplementation, I went with the simpler route of just having the message broadcast to and picked up by all clients (including the sender). </p>
-<p>Finally when a client disconnects, we free up the resources they were using and remove them from our clients Map so that we don’t try to send any more messages to that connection. This is why we used a Map so that the client with the appropriate ID can be deleted.</p>
+<p>Finally we need to define a couple more callbacks for when a client sends a message (or rather, when the server receives a message) and when the client disconnects. WebSockets make this really simple with the <code>on(&#39;message&#39;, callback)</code> and <code>on(&#39;close&#39;, callback)</code> respectively. Upon (the server) receiving a message, we want to save the message and broadcast that message to all connected clients. Ideally, we wouldn’t send this back to client who sent it and just update the sender’s client side messages, but as this was just a quick implementation, I went with the simpler route of just having the message broadcast to and picked up by all clients (including the sender). </p>
+<p>Finally when a client disconnects, we free up the resources they were using and remove them from our clients Map so that we don’t try to send any more messages to that connection. This is why we used a Map, so that the client with the appropriate ID can be deleted.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">wsServer.on(&apos;request&apos;, function (request) &#123;</div><div class="line">    // ....Previous code</div><div class="line"></div><div class="line">    // Envoked when a message is sent</div><div class="line">    connection.on(&apos;message&apos;, function (message) &#123;</div><div class="line">        var msgString = message.utf8Data;</div><div class="line">        messages.push(msgString);</div><div class="line">        sendToAllClients(msgString);</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    // Envoked when client disconnects</div><div class="line">    connection.on(&apos;close&apos;, function (reasonCode, description) &#123;</div><div class="line">        clients.delete(connection.id);</div><div class="line">        console.log((new Date()) + &apos; Peer &apos; + connection.remoteAddress + &apos; disconnected.&apos;);</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p>The last thing to do on the server side code is to define our <code>sendToAllClients(message)</code> function. Since we have a Map containing all of our clients and a function <code>sendUTF(message)</code> to send a message to a client, this is really simple.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// Note this is outside of the on request received function body</div><div class="line">function sendToAllClients(message) &#123;</div><div class="line">    clients.forEach(function(client) &#123;</div><div class="line">        client.sendUTF(message);</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -184,9 +182,9 @@ function addMessage(message) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://stefanolupo.tech/blog/2017/09/19/Airport-Web-Sockets/" data-id="cj809gjb40001rjqdqct9lodo" class="article-share-link">Share</a>
+      <a data-url="http://stefanolupo.tech/blog/2017/09/19/Airport-Web-Sockets/" data-id="cj809gjb40001rjqdqct9lodo" class="article-share-link">Partager</a>
       
-        <a href="http://stefanolupo.tech/blog/2017/09/19/Airport-Web-Sockets/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://stefanolupo.tech/blog/2017/09/19/Airport-Web-Sockets/#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/WebSockets-Node-Javascript-SSH-Raspberry-Pi/">WebSockets Node Javascript SSH Raspberry Pi</a></li></ul>
@@ -259,9 +257,9 @@ function addMessage(message) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://stefanolupo.tech/blog/2017/09/02/hexagonPatioTable/" data-id="cj809gjay0000rjqdms6r7sg3" class="article-share-link">Share</a>
+      <a data-url="http://stefanolupo.tech/blog/2017/09/02/hexagonPatioTable/" data-id="cj809gjay0000rjqdms6r7sg3" class="article-share-link">Partager</a>
       
-        <a href="http://stefanolupo.tech/blog/2017/09/02/hexagonPatioTable/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://stefanolupo.tech/blog/2017/09/02/hexagonPatioTable/#disqus_thread" class="article-comment-link">Commentaires</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Woodworking-Octagonal-Patio-Table-DIY-Steve-Ramsey/">Woodworking Octagonal Patio Table DIY Steve Ramsey</a></li></ul>
@@ -280,7 +278,7 @@ function addMessage(message) {
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Catégories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Web-Programming/">Web Programming</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Woodworking/">Woodworking</a></li></ul>
     </div>
@@ -290,7 +288,7 @@ function addMessage(message) {
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/WebSockets-Node-Javascript-SSH-Raspberry-Pi/">WebSockets Node Javascript SSH Raspberry Pi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Woodworking-Octagonal-Patio-Table-DIY-Steve-Ramsey/">Woodworking Octagonal Patio Table DIY Steve Ramsey</a></li></ul>
     </div>
@@ -300,7 +298,7 @@ function addMessage(message) {
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
       <a href="/blog/tags/WebSockets-Node-Javascript-SSH-Raspberry-Pi/" style="font-size: 10px;">WebSockets Node Javascript SSH Raspberry Pi</a> <a href="/blog/tags/Woodworking-Octagonal-Patio-Table-DIY-Steve-Ramsey/" style="font-size: 10px;">Woodworking Octagonal Patio Table DIY Steve Ramsey</a>
     </div>
@@ -319,7 +317,7 @@ function addMessage(message) {
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -344,7 +342,7 @@ function addMessage(message) {
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 Stefano Lupo<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

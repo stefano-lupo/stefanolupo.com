@@ -47,14 +47,6 @@ $ npm install websocket --save
 Finally it was time to write some code. I decided to work on the server side code first. The first step is to set up a standard Node HTTP server.
 ```
 var http = require('http');
-var server = http.createServer(function (request, response) { 
-    response.end("Hello from Node");
-});
-```
-Browse to http://localhost:3000 and you should be greeted with a message. Once we're happy that works we can remove our request handler entirely as it is not needed.
-
-```
-var http = require('http');
 var server = http.createServer(function (request, response) {});
 ```
 
@@ -62,16 +54,16 @@ Next we need to specify a free port on which the server can listen. I picked 300
 
 ***http://<Router's IP>:3000    --->    Router    --->    Server on Raspberry Pi Listening on port 3000***
 
-Since I had port forwarded port 3000 to point to my Raspberry Pi, the router then forwards those packets onto my Raspberry Pi allowing my server to be connected to from anywhere.
+Since I had port forwarded port 3000 to point to my Raspberry Pi, the router then forwards those packets onto my Raspberry Pi allowing my server to be connected to from outside of my local network.
 
-So telling out HTTP server to listen on port 3000
+So telling our HTTP server to listen on port 3000:
 ```
 server.listen(3000, function () {
     console.log('Server is listening on port 3000');
 });
 ```
 
-Next we can create a WebSocket Server and connect it up to our HTTP server. This is what gives us our low latency, long held client-server connection, as opposed to standard HTTP which makes requires a fresh HTTP request everytime we wish to update.
+Next we can create a WebSocket Server and connect it up to our HTTP server by passing the HTTP server to the constructor. This `WebSocket` is what gives us our long held client-server connection, as opposed to standard HTTP which requires a fresh HTTP request everytime we wish to update.
 
 ```
 var WebSocketServer = require('websocket').server;
@@ -105,9 +97,9 @@ wsServer.on('request', function (request) {
 });
 ```
 
-Finally we need to define a couple more callbacks for when a client sends a message (or rather, when the server receives a message) and when the client disconnects. WebSockets make this really simple with the `on('message', callback)` and `on('close', callback)` respectively. Upon (the server) receiving a message, we want to save the message and broadcast that message to all connected clients. Ideally, we wouldn't send this back to client who sent it and just update the sender's client side messages, but as this was just a quick imthenplementation, I went with the simpler route of just having the message broadcast to and picked up by all clients (including the sender). 
+Finally we need to define a couple more callbacks for when a client sends a message (or rather, when the server receives a message) and when the client disconnects. WebSockets make this really simple with the `on('message', callback)` and `on('close', callback)` respectively. Upon (the server) receiving a message, we want to save the message and broadcast that message to all connected clients. Ideally, we wouldn't send this back to client who sent it and just update the sender's client side messages, but as this was just a quick implementation, I went with the simpler route of just having the message broadcast to and picked up by all clients (including the sender). 
 
-Finally when a client disconnects, we free up the resources they were using and remove them from our clients Map so that we don't try to send any more messages to that connection. This is why we used a Map so that the client with the appropriate ID can be deleted.
+Finally when a client disconnects, we free up the resources they were using and remove them from our clients Map so that we don't try to send any more messages to that connection. This is why we used a Map, so that the client with the appropriate ID can be deleted.
 
 ```
 wsServer.on('request', function (request) {

@@ -46,7 +46,6 @@ I then got to work cutting and fitting the 4x1s to span the width of the octagon
  # The Finished Table
  All that was left to do was to apply a finish. I really liked the 'whiteness' (or lack of yellowness) of unfinished pine and have had projects in past look awful due to how yellow the pine went after varnishing. Luckily I found this [Ronseal Outdoor Varnish](http://www.ronseal.co.uk/home/exterior-doors-and-windows/outdoor-varnish/) that apparently "doesn't yellow like traditional varnish" and after applying 4 coats was happy it with how little it yellowed. To be honest it could have used a few more coats but I was so sick of varnishing that I decided I'd rather build a new patio table next year than do any more varnishing.
 
-![The Finished Table](https://s3-eu-west-1.amazonaws.com/stefano-lupo-blog-photos/patio-table/20170610_180431.jpg)
-
-![The Underside]
-(https://s3-eu-west-1.amazonaws.com/stefano-lupo-blog-photos/patio-table/20170610_180521.jpg)
+![The Finished Table](https://s3-eu-west-1.amazonaws.com/stefano-lupo-blog-photos/patio-table/20170610_180431.jpg)  
+  
+![The Underside](https://s3-eu-west-1.amazonaws.com/stefano-lupo-blog-photos/patio-table/20170610_180521.jpg)

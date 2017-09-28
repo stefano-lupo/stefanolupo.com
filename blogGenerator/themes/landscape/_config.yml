@@ -2,7 +2,7 @@
 menu:
   Home: http://stefanolupo.tech
   Archives: /archives
-rss: /atom.xml
+#rss: /atom.xml
 
 # Content
 excerpt_link: Read More
@@ -12,20 +12,20 @@ fancybox: true
 sidebar: right
 widgets:
 - category
-- tag
-- tagcloud
+#- tag
+#- tagcloud
 - archive
 - recent_posts
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:
-# - category
+- category
 # - tagcloud
-# - archive
+- archive
 
 # widget behavior
 archive_type: 'monthly'
-show_count: false
+show_count: true
 
 # Miscellaneous
 google_analytics:

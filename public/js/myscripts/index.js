@@ -39,128 +39,9 @@ $(document).ready(function () {
     if (width < 600) {
         isMobile = true;
     }
-    $('#percentage-stat').addClass('hide-me-keep-space');
-
-
-    $(window).scroll(function () {
-        var currentY = $(this).scrollTop();
-        var mobileFirst = $("#mobile-first").offset().top;
-        var solution = $("#solution").offset().top;
-        var mobileStartLoc = $("#non-mobile-friendly-mobile-start-animation").offset().top;
-
-        if (!isMobile) {
-
-            if ((animated === false) && (currentY >= mobileFirst) && (currentY <= solution)) {
-                $('#percentage-stat').removeClass('hide-me-keep-space');
-                $('.count').each(function () {
-                    $(this).prop('Counter', 0).animate({
-                        Counter: $(this).text()
-                    }, {
-                        duration: 4000,
-                        easing: 'swing',
-                        step: function (now) {
-                            $(this).text(Math.ceil(now));
-                        }
-                    });
-                });
-                animated = true;
-            }
-        } else {
-            if ((animated === false) && (currentY >= (mobileStartLoc - 600)) && (currentY <= solution)) {
-                $('#percentage-stat').removeClass('hide-me-keep-space');
-                $('.count').each(function () {
-                    $(this).prop('Counter', 0).animate({
-                        Counter: $(this).text()
-                    }, {
-                        duration: 4000,
-                        easing: 'swing',
-                        step: function (now) {
-                            $(this).text(Math.ceil(now));
-                        }
-                    });
-                });
-                animated = true;
-            }
-        }
-
-    });
-    
-    
-        $(window).scroll(function () {
-        var currentY = $(this).scrollTop();
-        var mobileFirst = $("#mobile-first").offset().top;
-        var solution = $("#solution").offset().top;
-        var pageLoadStartLoc = $("#page-load-start-animation").offset().top;
-
-        if (!isMobile) {
-
-            if ((animated === false) && (currentY >= mobileFirst) && (currentY <= solution)) {
-                $('#percentage-stat').removeClass('hide-me-keep-space');
-                $('.count').each(function () {
-                    $(this).prop('Counter', 0).animate({
-                        Counter: $(this).text()
-                    }, {
-                        duration: 4000,
-                        easing: 'swing',
-                        step: function (now) {
-                            $(this).text(Math.ceil(now));
-                        }
-                    });
-                });
-                animated = true;
-            }
-        } else {
-            if ((animated === false) && (currentY >= (pageLoadStartLoc - 600)) && (currentY <= solution)) {
-                $('#percentage-stat').removeClass('hide-me-keep-space');
-                $('.count').each(function () {
-                    $(this).prop('Counter', 0).animate({
-                        Counter: $(this).text()
-                    }, {
-                        duration: 4000,
-                        easing: 'swing',
-                        step: function (now) {
-                            $(this).text(Math.ceil(now));
-                        }
-                    });
-                });
-                animated = true;
-            }
-        }
-
-    });
+    $('#percentage-stat').addClass('hide-me-keep-space');   
 });
 
-
-
-
-
-//Sources Div
-$(document).ready(function () {
-    'use strict';
-    $('#sources-div').hide();
-    $('#tablet-size').hide();
-    $('#mobile-size').hide();
-});
-
-// var shown = false;
-// $(document).scroll(function () {
-    // 'use strict';
-    // var currentY = $(this).scrollTop();
-    // var mobileFirst = $("#mobile-first").offset().top;
-    // var onePageSite = $("#site-types").offset().top;
-// 
-// 
-// 
-    // if ((currentY > mobileFirst) && (currentY < onePageSite) && (!shown)) {
-        // $('#sources-div').fadeIn();
-        // shown = true;
-        // $('#sources-div').delay(4000).fadeOut('slow');
-// 
-    // } else {
-        // $('#sources-div').fadeOut();
-    // }
-// 
-// });
 
 
 //Code for switching views is awful - REVISIT
@@ -226,4 +107,9 @@ $(document).ready(function () {
         maxHeight = Math.max.apply(null, heights);
 
     $(".equal-height").height(maxHeight);
+});
+
+$(document).ready(function () {
+     var canvasWidth = $('#canvas-container').width();
+    $('#game-of-life-canvas').width(canvasWidth);
 });

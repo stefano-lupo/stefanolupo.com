@@ -627,6 +627,7 @@
 
 			<!-- Index JS-->
 			<script src="js/myscripts/index.js"></script>
+			<script src="js/myscripts/webdesign.js"></script>
 
 			<!-- Google Chart Scripts --->
 			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>

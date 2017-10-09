@@ -90,7 +90,7 @@
 
 		</script>
 
-
+	
 
 	</head>
 
@@ -329,7 +329,7 @@
 									I'm really drawn to most apsects of technology, programming, engineering, woodworking and music.
 
 								</p>
-								<p>Please see <a target="_blank" href="Stefano_Lupo_Curriculum_Vitae_17.pdf">my CV</a> for more info.</p>
+								<p>Please see <a target="_blank" href="Stefano_Lupo_CV.pdf">my CV</a> for more info.</p>
 
 							</div>
 
@@ -803,6 +803,40 @@
 
 			</section>
 
+			<section class="container-fluid" id="game-of-life">
+				<h2>John Conway's Game of Life</h2>
+				<div class="row">
+					<div class="col-lg-8"> 	
+						<p>While you are here why have a quick go at John Conway's Game of Life?</p>
+						<p>I built this in a couple of hours using Processing which is a great Java framework for doing this with graphics. 
+						
+						</p>
+						<p>It is a fascinating simulation of how populations evolve over time according to 4 simple rules:</p>
+						<hr>
+						<ol>
+							<li><p>Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.</p></li>
+							<li><p>Any live cell with two or three live neighbours lives on to the next generation.</p></li>
+							<li><p>Any live cell with more than three live neighbours dies, as if by overpopulation.</p></li>
+							<li><p>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</p></li>
+						</ol>
+					</div>
+					<div class="col-lg-4">
+						<div id="canvas-container" >						
+							<canvas id="game-of-life-canvas" data-processing-sources="game-of-life.pde"></canvas>
+							<br>
+							<br>
+							<button onClick="generate()">Generate</button>
+							<button onClick="start()">Start</button>
+							<button onClick="stop()">Stop</button>
+						</div>
+					</div>
+				</div>
+
+		
+			</section>
+
+			
+
 
 
 
@@ -813,7 +847,25 @@
 
 			?>
 
+			<script type="text/javascript">
+				var processingInstance;
+				
+				function start(){
+					processingInstance = Processing.getInstanceById('game-of-life-canvas');
+					processingInstance.startButtonPressed();
+				}
+				
+				function stop(){
+					processingInstance = Processing.getInstanceById('game-of-life-canvas');
+					processingInstance.stopButtonPressed();
+				}
 
+				function generate() {
+					processingInstance = Processing.getInstanceById('game-of-life-canvas');
+					processingInstance.generateButtonPressed();
+				}
+				
+			</script>
 
 			<!-- jQuery -->
 
@@ -833,6 +885,7 @@
 
 			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>
 
 
 			<!-- Common JS For All -->

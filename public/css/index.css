@@ -1219,3 +1219,13 @@ p .enlarged-stat {
 .addon {
     padding-top: 4%;
 }
+
+/* Game of Life */
+#canvas-container {
+   width: 100%;
+   text-align:center;
+}
+
+canvas {
+   display: inline;
+}

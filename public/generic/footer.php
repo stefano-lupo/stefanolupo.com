@@ -301,7 +301,7 @@ echo '			<footer class="container-fluid">
 
 						<p class="text-right">
 
-							Designed by <a href="http://www.stefanolupo.tech/webdesign.php">Stefano Lupo Web Design</a>
+							Designed by <a href="http://www.stefanolupo.tech/web-design.php">Stefano Lupo Web Design</a>
 
 						</p>
 

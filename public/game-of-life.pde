@@ -37,7 +37,7 @@ void draw() {
             }
         }
     } else {
-        frameRate(15);
+        frameRate(10);
         applyRules();
         if (keyPressed && key == 'r') {
             reset();
@@ -104,7 +104,7 @@ Cell[][] initGrid() {
 }
 
 void drawGrid() {
-    background(0);
+    background(#88BBF0);
     for (int i=0; i<numRows; i++) {
         for (int j=0; j<numCols; j++) {
             Cell cell = grid[i][j];

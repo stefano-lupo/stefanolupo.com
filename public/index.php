@@ -3,653 +3,663 @@
 <html lang="en">
 
 
+<head>
 
-	<head>
 
+    <meta charset="utf-8">
 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- SEO -->
 
+    <title>Stefano Lupo Tech - Programming, Engineering, Web Design</title>
 
+    <meta name="description"
+          content="Stefano Lupo Tech - I am a Computer Engineering Student at Trinity College Dublin. This is my site about programming, engineering and other interesting things"/>
 
-		<!-- SEO -->
+    <meta name="author" content="Stefano Lupo Tech">
 
-		<title>Stefano Lupo Tech - Programming, Engineering, Web Design</title>
+    <link rel="icon" type="image/png" href="img/lupo-ico.png">
 
-		<meta name="description" content="Stefano Lupo Tech - I am a Computer Engineering Student at Trinity College Dublin. This is my site about programming, engineering and other interesting things" />
 
-		<meta name="author" content="Stefano Lupo Tech">
+    <!-- Bootstrap Core CSS -->
 
-		<link rel="icon" type="image/png" href="img/lupo-ico.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 
 
+    <!-- Plugin CSS -->
 
-		<!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 
+    <!-- Font Awesome -->
 
+    <script src="https://use.fontawesome.com/4ba9c93c96.js"></script>
 
-		<!-- Plugin CSS -->
 
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- Custom CSS -->
 
+    <link rel="stylesheet" href="css/index.css" type="text/css">
 
+    <link rel="stylesheet" href="css/about-me.css" type="text/css">
 
-		<!-- Font Awesome -->
 
-		<script src="https://use.fontawesome.com/4ba9c93c96.js"></script>
+    <!-- Analytics Google -->
 
+    <script>
 
+      (function (i, s, o, g, r, a, m) {
 
-		<!-- Custom CSS -->
+        i['GoogleAnalyticsObject'] = r;
 
-		<link rel="stylesheet" href="css/index.css" type="text/css">
+        i[r] = i[r] ||
 
-		<link rel="stylesheet" href="css/about-me.css" type="text/css">
+          function () {
 
+            (i[r].q = i[r].q || []).push(arguments)
 
+          }, i[r].l = 1 * new Date();
 
-		<!-- Analytics Google -->
+        a = s.createElement(o),
 
-		<script>
+          m = s.getElementsByTagName(o)[0];
 
-			(function(i, s, o, g, r, a, m) {
+        a.async = 1;
 
-				i['GoogleAnalyticsObject'] = r;
+        a.src = g;
 
-				i[r] = i[r] ||
+        m.parentNode.insertBefore(a, m)
 
-				function() {
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-					(i[r].q = i[r].q || []).push(arguments)
 
-				}, i[r].l = 1 * new Date();
+      ga('create', 'UA-81356171-1', 'auto');
 
-				a = s.createElement(o),
+      ga('send', 'pageview');
 
-				m = s.getElementsByTagName(o)[0];
+    </script>
 
-				a.async = 1;
 
-				a.src = g;
+</head>
 
-				m.parentNode.insertBefore(a, m)
 
-			})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+<body id="page-top">
 
+<nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
 
+    <div class="container-fluid">
 
-			ga('create', 'UA-81356171-1', 'auto');
+        <div class="navbar-header">
 
-			ga('send', 'pageview');
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 
-		</script>
+                <span class="icon-bar"></span>
 
-	
+                <span class="icon-bar"></span>
 
-	</head>
+                <span class="icon-bar"></span>
 
+            </button>
 
 
-	<body id="page-top">
+        </div>
 
-		<nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
 
-			<div class="container-fluid">
+        <div class="navbar-collapse collapse">
 
-				<div class="navbar-header">
+            <ul class="nav navbar-nav navbar-left nav-links-bg">
 
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <li>
 
-						<span class="icon-bar"></span>
+                    <a href="web-design.php">Web Design</a>
 
-						<span class="icon-bar"></span>
+                </li>
 
-						<span class="icon-bar"></span>
+                <li>
 
-					</button>
+                    <a class="page-scroll" href="portfolio.php">Portfolio</a>
 
+                </li>
 
+                <li>
 
-				</div>
+                    <a class="page-scroll" href="/blog">Blog</a>
 
+                </li>
 
 
-				<div class="navbar-collapse collapse">
+            </ul>
 
-					<ul class="nav navbar-nav navbar-left nav-links-bg">
 
-						<li>
+            <ul class="nav navbar-nav navbar-right nav-links-bg">
 
-							<a href="web-design.php">Web Design</a>
+                <li role="separator" class="divider"></li>
 
-						</li>
+                <li>
 
-						<li>
+                    <a class="page-scroll" href="footer">Contact</a>
 
-							<a class="page-scroll" href="portfolio.php">Portfolio</a>
+                </li>
 
-						</li>
+            </ul>
 
-						<li>
+        </div>
 
-							<a class="page-scroll" href="/blog">Blog</a>
+    </div>
 
-						</li>
+</nav>
 
+<div id="logo-box">
 
+    <a href="#page-top"><img src="img/wolf.png" id="logo-pic" alt="Lupo Web Design Logo"/></a>
 
-					</ul>
+</div>
 
 
+<header class="container-fluid">
 
-					<ul class="nav navbar-nav navbar-right nav-links-bg">
+    <img src="img/wolf.png" id="header-logo" alt="Lupo Web Design Logo">
 
-						<li role="separator" class="divider"></li>
+    <h1>Stefano Lupo Tech
 
-						<li>
+        <br>
 
-							<a class="page-scroll" href="footer">Contact</a>
+        <span>Programming, Tech and Other Interesting Things</span></h1>
 
-						</li>
+    <a href="#page-content" class="page-scroll">
 
-					</ul>
+        <button>
 
-				</div>
+            Begin
 
-			</div>
+        </button>
+    </a>
 
-		</nav>
+</header>
 
-		<div id="logo-box">
 
-			<a href="#page-top"><img src="img/wolf.png" id="logo-pic" alt="Lupo Web Design Logo"/></a>
+<div id="page-content">
 
-		</div>
 
+    <section class="container-fluid larger-container" id="about-me">
 
+        <div class="row" id="about">
 
-		<header class="container-fluid">
+            <div class="col-sm-4" id="cartoon">
 
-			<img src="img/wolf.png" id="header-logo" alt="Lupo Web Design Logo">
+                <img src="http://cliparts.co/cliparts/nrc/L6p/nrcL6pi84.png" class="img-responsive"/>
 
-			<h1>Stefano Lupo Tech
+            </div>
 
-			<br>
+            <div class="col-sm-8" id="about-me-stats">
 
-			<span>Programming, Tech and Other Interesting Things</span></h1>
+                <h1>About Me</h1>
 
-			<a href="#page-content" class="page-scroll">
+                <div class="row">
 
-			<button>
+                    <div class="col-xs-4 col-md-2">
 
-				Begin
+                        <p>
 
-			</button> </a>
+                            <strong>Name:</strong>
 
-		</header>
+                        </p>
 
+                    </div>
 
+                    <div class="col-xs-8 col-md-10">
 
-		<div id="page-content">
+                        <p>
 
+                            Stefano Lupo
 
+                        </p>
 
-			<section class="container-fluid larger-container" id="about-me">
+                    </div>
 
-				<div class="row" id="about">
+                </div>
 
-					<div class="col-sm-4" id="cartoon">
+                <div class="row">
 
-						<img src="http://cliparts.co/cliparts/nrc/L6p/nrcL6pi84.png" class="img-responsive" />
+                    <div class="col-xs-4  col-md-2">
 
-					</div>
+                        <p>
 
-					<div class="col-sm-8" id="about-me-stats">
+                            <strong>Age:</strong>
 
-						<h1>About Me</h1>
+                        </p>
 
-						<div class="row">
+                    </div>
 
-							<div class="col-xs-4 col-md-2">
+                    <div class="col-xs-8 col-md-10">
 
-								<p>
+                        <p>
 
-									<strong>Name:</strong>
+                            22
 
-								</p>
+                        </p>
 
-							</div>
+                    </div>
 
-							<div class="col-xs-8 col-md-10">
+                </div>
 
-								<p>
+                <div class="row">
 
-									Stefano Lupo
+                    <div class="col-xs-4  col-md-2">
 
-								</p>
+                        <p>
 
-							</div>
+                            <strong>Occupation:</strong>
 
-						</div>
+                        </p>
 
-						<div class="row">
+                    </div>
 
-							<div class="col-xs-4  col-md-2">
+                    <div class="col-xs-8 col-md-10">
 
-								<p>
+                        <p>
 
-									<strong>Age:</strong>
+                            Software Engineer
 
-								</p>
+                        </p>
 
-							</div>
+                    </div>
 
-							<div class="col-xs-8 col-md-10">
+                </div>
 
-								<p>
+                <div class="row">
 
-									22
+                    <div class="col-xs-4  col-md-2">
 
-								</p>
+                        <p>
 
-							</div>
+                            <strong>Studying:</strong>
 
-						</div>
+                        </p>
 
-						<div class="row">
+                    </div>
 
-							<div class="col-xs-4  col-md-2">
+                    <div class="col-xs-8 col-md-10">
 
-								<p>
+                        <p>
 
-									<strong>Occupation:</strong>
+                            Computer Engineering at Trinity College Dublin
 
-								</p>
+                        </p>
 
-							</div>
+                    </div>
 
-							<div class="col-xs-8 col-md-10">
+                </div>
 
-								<p>
+                <div class="row">
 
-									Software Engineer
+                    <div class="col-xs-4  col-md-2">
 
-								</p>
+                        <p>
 
-							</div>
+                            <strong>Interests:</strong>
 
-						</div>
+                        </p>
 
-						<div class="row">
+                    </div>
 
-							<div class="col-xs-4  col-md-2">
+                    <div class="col-xs-8 col-md-10">
 
-								<p>
+                        <p>
 
-									<strong>Studying:</strong>
+                            I'm really drawn to most apsects of technology, programming, engineering, woodworking and
+                            music.
 
-								</p>
+                        </p>
+                        <p>Please see <a target="_blank" href="Stefano_Lupo_CV.pdf">my CV</a> for more info.</p>
 
-							</div>
+                    </div>
 
-							<div class="col-xs-8 col-md-10">
+                </div>
 
-								<p>
 
-									Computer Engineering at Trinity College Dublin
+            </div>
 
-								</p>
+        </div>
 
-							</div>
+    </section>
 
-						</div>
 
-						<div class="row">
+    <section class="container-fluid larger-container" id="languages">
 
-							<div class="col-xs-4  col-md-2">
+        <h2 style="padding-bottom: 0">Languages and Frameworks</h2>
 
-								<p>
+        <p class="text-center">These are the languages and frameworks I have been using lately and am most comfortable
+            with. However learning new languages is always fun and once you have a good grasp of the basics of computer
+            science, usually don't take too long to pick up!</p>
 
-									<strong>Interests:</strong>
+        <br>
 
-								</p>
+        <div class="row equal">
 
-							</div>
+            <div class="col-md-4">
 
-							<div class="col-xs-8 col-md-10">
+                <div class="card">
 
-								<p>
+                    <img class="img-responsive icons" src="img/about-me/java.png">
 
-									I'm really drawn to most apsects of technology, programming, engineering, woodworking and music.
+                    <h4>Java</h4>
 
-								</p>
-								<p>Please see <a target="_blank" href="Stefano_Lupo_CV.pdf">my CV</a> for more info.</p>
+                    <hr>
 
-							</div>
+                    <p>
 
-						</div>
+                        Java was the first programming language I learned and is probably where I feel most comfortable
+                        if im tackling a large project. I find the object oriented approach extremely satisfying and
+                        enjoy finding the best ways to break the problem up into clean, reusable classes.
 
+                    </p>
 
+                </div>
 
-					</div>
+            </div>
 
-				</div>
+            <div class="col-md-4">
 
-			</section>
+                <div class="card">
 
+                    <img class="img-responsive icons" src="img/about-me/android.png">
 
+                    <h4>Android</h4>
 
+                    <hr>
 
+                    <p>
 
-			<section class="container-fluid larger-container" id="languages">
+                        Android is one of my favourite environments to work in (ignoring the long build times for a
+                        moment..). I recently built a <a href="https://github.com/Richard-Lynch/Android-Top-Down-RPG"
+                                                         target="_blank">top down RPG </a> in vanilla Android with a
+                        group of friends and thoroughly enjoyed it. I really hope to work on a large scale Android
+                        project somewhere down to the line.
 
-				<h2 style="padding-bottom: 0">Languages and Frameworks</h2>
+                    </p>
 
-				<p class="text-center">These are the languages and frameworks I have been using lately and am most comfortable with. However learning new languages is always fun and once you have a good grasp of the basics of computer science, usually don't take too long to pick up!</p>
+                </div>
 
-					<br>
+            </div>
 
-				<div class="row equal">
+            <div class="col-md-4">
 
-					<div class="col-md-4">
+                <div class="card">
 
-						<div class="card">
+                    <img class="img-responsive icons" src="img/about-me/c.png">
 
-							<img class="img-responsive icons" src="img/about-me/java.png">
+                    <h4>C</h4>
 
-							<h4>Java</h4>
+                    <hr>
 
-							<hr>
+                    <p>
 
-							<p>
+                        Working in C is extremely gratifying (and frustrating). My Data Structures and Algorithms module
+                        was taught through C and implementing things like graph traversal algorithms (eg Dijkstra's
+                        Algorithm) at such a low level (as well as working in ARM Assembler) really gave me an insight
+                        into writing efficient code and how it was all implemented under the hood.
 
-								Java was the first programming language I learned and is probably where I feel most comfortable if im tackling a large project. I find the object oriented approach extremely satisfying and enjoy finding the best ways to break the problem up into clean, reusable classes.
+                    </p>
 
-							</p>
+                </div>
 
-						</div>
+            </div>
 
-					</div>
+        </div>
 
-					<div class="col-md-4">
+        <div class="row equal">
 
-						<div class="card">
+            <div class="col-md-4">
 
-							<img class="img-responsive icons" src="img/about-me/android.png">
+                <div class="card">
 
-							<h4>Android</h4>
+                    <img class="img-responsive icons" src="img/about-me/node.png">
 
-							<hr>
+                    <h4>Node</h4>
 
-							<p>
+                    <hr>
 
-								Android is one of my favourite environments to work in (ignoring the long build times for a moment..). I recently built a <a href="https://github.com/Richard-Lynch/Android-Top-Down-RPG" target="_blank">top down RPG </a> in vanilla Android with a group of friends and thoroughly enjoyed it. I really hope to work on a large scale Android project somewhere down to the line.
+                    <p>
 
-							</p>
+                        Node is a fairly new language and as such I dont have too much experience with it (although it
+                        is what I am primarily working in at the moment). The widespread acceptance of Node means that
+                        it is one of the best languages for getting a project off the ground
 
-						</div>
+                        as there are often fantastic open source packages which can really speed up the development
+                        process. I have mainly used Node for developing REST APIs with the popular Express package along
+                        with Mongoose (for MongoDB) or Sequelize (for PostgreSQL).
 
-					</div>
+                    </p>
 
-					<div class="col-md-4">
+                </div>
 
-						<div class="card">
+            </div>
 
-							<img class="img-responsive icons" src="img/about-me/c.png">
+            <div class="col-md-4">
 
-							<h4>C</h4>
+                <div class="card">
 
-							<hr>
+                    <img class="img-responsive icons" src="img/about-me/react-native.png">
 
-							<p>
+                    <h4>React Native</h4>
 
-								Working in C is extremely gratifying (and frustrating). My Data Structures and Algorithms module was taught through C and implementing things like graph traversal algorithms (eg Dijkstra's Algorithm) at such a low level (as well as working in ARM Assembler) really gave me an insight into writing efficient code and how it was all implemented under the hood.
+                    <hr>
 
-							</p>
+                    <p>
 
-						</div>
+                        React Native is one of my favourite frameworks at the moment. I had used other <em>hybrid</em>
+                        frameworks before (namely Ionic / Cordova) and never really felt like the end product was up to
+                        scratch. React Native apps really don't suffer from these problems and provide a great user
+                        experience.
 
-					</div>
+                        Developing is also a breeze thanks to using simple markup and flex on the UI side and tools like
+                        Redux on the logic side. I spent the summer of 2017 working as a developer with <a
+                                href="http://getwynk.com" target="_blank">Wynk</a> using React Native.
 
-				</div>
+                    </p>
 
-				<div class="row equal">
+                </div>
 
-					<div class="col-md-4">
+            </div>
 
-						<div class="card">
+            <div class="col-md-4">
 
-							<img class="img-responsive icons" src="img/about-me/node.png">
+                <div class="card">
 
-							<h4>Node</h4>
+                    <img class="img-responsive icons" src="img/about-me/mongodb.png">
 
-							<hr>
+                    <h4>MongoDB</h4>
 
-							<p>
+                    <hr>
 
-								Node is a fairly new language and as such I dont have too much experience with it (although it is what I am primarily working in at the moment). The widespread acceptance of Node means that it is one of the best languages for getting a project off the ground
+                    <p>
 
-								as there are often fantastic open source packages which can really speed up the development process. I have mainly used Node for developing REST APIs with the popular Express package along with Mongoose (for MongoDB) or Sequelize (for PostgreSQL).
+                        MongoDB is a nifty framework for a document based NoSQL database. It works great with Mongoose
+                        (for Node JS) and is perfect for applications where data isn't tightly related or some data
+                        duplication is acceptable.
 
-							</p>
+                        Having all a user's data in one place makes querying extremely simple and efficient so as long
+                        as the application doesn't call for too many joins between documents, MongoDB is a great choice.
 
-						</div>
+                    </p>
 
-					</div>
+                </div>
 
-					<div class="col-md-4">
+            </div>
 
-						<div class="card">
+        </div>
 
-							<img class="img-responsive icons" src="img/about-me/react-native.png">
+    </section>
 
-							<h4>React Native</h4>
 
-							<hr>
+    <section class="container-fluid larger-container" id="proficiencies">
 
-							<p>
+        <h2 style="padding-bottom: 0">Web Technologies</h2>
 
-								React Native is one of my favourite frameworks at the moment. I had used other <em>hybrid</em> frameworks before (namely Ionic / Cordova) and never really felt like the end product was up to scratch. React Native apps really don't suffer from these problems and provide a great user experience.
+        <p>These are some of the tools I use to build basic websites.</p>
 
-								Developing is also a breeze thanks to using simple markup and flex on the UI side and tools like Redux on the logic side. I spent the summer of 2017 working as a developer with <a href="http://getwynk.com" target="_blank">Wynk</a> using React Native.
+        <br>
 
-							</p>
+        <div class="row equal">
 
-						</div>
+            <div class="col-md-4">
 
-					</div>
+                <div class="card">
 
-					<div class="col-md-4">
+                    <img class="img-responsive icons" src="img/about-me/html5.png">
 
-						<div class="card">
+                    <h4>HTML 5</h4>
 
-							<img class="img-responsive icons" src="img/about-me/mongodb.png">
+                    <hr>
 
-							<h4>MongoDB</h4>
+                    <p>
 
-							<hr>
+                        HTML 5 is the markup language in which websites are built. All of the code to create and display
+                        your web page, along with any static content you wish to include is done so through HTML.
 
-							<p>
+                    </p>
 
-								MongoDB is a nifty framework for a document based NoSQL database. It works great with Mongoose (for Node JS) and is perfect for applications where data isn't tightly related or some data duplication is acceptable.
+                </div>
 
-								Having all a user's data in one place makes querying extremely simple and efficient so as long as the application doesn't call for too many joins between documents, MongoDB is a great choice.
+            </div>
 
-							</p>
+            <div class="col-md-4">
 
-						</div>
+                <div class="card">
 
-					</div>
+                    <img class="img-responsive icons" src="img/about-me/css3.png">
 
-				</div>
+                    <h4>CSS 3</h4>
 
-			</section>
+                    <hr>
 
+                    <p>
 
+                        CSS is the language used to style the content you create using HTML. CSS allows designers to add
+                        color, fonts, background images and much, much more and is responsible for all of the great web
+                        designs we see today!
 
+                    </p>
 
+                </div>
 
-			<section class="container-fluid larger-container" id="proficiencies">
+            </div>
 
-				<h2 style="padding-bottom: 0">Web Technologies</h2>
+            <div class="col-md-4">
 
-				<p>These are some of the tools I use to build basic websites.</p>
+                <div class="card">
 
-					<br>
+                    <img class="img-responsive icons" src="img/about-me/bootstrap.png">
 
-				<div class="row equal">
+                    <h4>Bootstrap</h4>
 
-					<div class="col-md-4">
+                    <hr>
 
-						<div class="card">
+                    <p>
 
-							<img class="img-responsive icons" src="img/about-me/html5.png">
+                        Bootstrap is an extremely popular framework with a strong focus on mobile-first, responsive
+                        design. It was built and is used by the creators of Twitter. Bootstrap is open source, meaning
+                        it is fully customizable, and gives me complete control.
 
-							<h4>HTML 5</h4>
+                    </p>
 
-							<hr>
+                </div>
 
-							<p>
+            </div>
 
-								HTML 5 is the markup language in which websites are built. All of the code to create and display your web page, along with any static content you wish to include is done so through HTML.
+        </div>
 
-							</p>
+        <div class="row equal">
 
-						</div>
+            <div class="col-md-4">
 
-					</div>
+                <div class="card">
 
-					<div class="col-md-4">
+                    <img class="img-responsive icons" src="img/about-me/jQurery.png">
 
-						<div class="card">
+                    <h4>jQuery</h4>
 
-							<img class="img-responsive icons" src="img/about-me/css3.png">
+                    <hr>
 
-							<h4>CSS 3</h4>
+                    <p>
 
-							<hr>
+                        jQuery is an extremely popular javascript library which allows web pages to become interactive.
+                        Without jQuery (or javascript!), once a web page loaded - that would be it. No fancy image
+                        slideshows or dynamic content that comes into and falls out of view at the correct times.
 
-							<p>
+                    </p>
 
-								CSS is the language used to style the content you create using HTML. CSS allows designers to add color, fonts, background images and much, much more and is responsible for all of the great web designs we see today!
+                </div>
 
-							</p>
+            </div>
 
-						</div>
+            <div class="col-md-4">
 
-					</div>
+                <div class="card">
 
-					<div class="col-md-4">
+                    <img class="img-responsive icons" src="img/about-me/php.png">
 
-						<div class="card">
+                    <h4>php</h4>
 
-							<img class="img-responsive icons" src="img/about-me/bootstrap.png">
+                    <hr>
 
-							<h4>Bootstrap</h4>
+                    <p>
 
-							<hr>
+                        php is an backend language used for interacting with databases. A mastery of this language
+                        allows you to insert data into your database and programatically generate your webpage based on
+                        whats in the database, or even user input. For example, different content can be shown to
+                        different users through php!
 
-							<p>
+                    </p>
 
-								Bootstrap is an extremely popular framework with a strong focus on mobile-first, responsive design. It was built and is used by the creators of Twitter. Bootstrap is open source, meaning it is fully customizable, and gives me complete control.
+                </div>
 
-							</p>
+            </div>
 
-						</div>
+            <div class="col-md-4">
 
-					</div>
+                <div class="card">
 
-				</div>
+                    <img class="img-responsive icons" src="img/about-me/mysql.png">
 
-				<div class="row equal">
+                    <h4>MySQL</h4>
 
-					<div class="col-md-4">
+                    <hr>
 
-						<div class="card">
+                    <p>
 
-							<img class="img-responsive icons" src="img/about-me/jQurery.png">
+                        MySQL works in tandom with php. Modern day webpages revolve around dynamic content which is
+                        stored in a database and programatically (conditionally) called upon. MySQL is the language used
+                        to manage, retreive and add content (text/images etc) to and from your database!
 
-							<h4>jQuery</h4>
+                    </p>
 
-							<hr>
+                </div>
 
-							<p>
+            </div>
 
-								jQuery is an extremely popular javascript library which allows web pages to become interactive. Without jQuery (or javascript!), once a web page loaded - that would be it. No fancy image slideshows or dynamic content that comes into and falls out of view at the correct times.
+        </div>
 
-							</p>
+    </section>
 
-						</div>
 
-					</div>
+    <!-- No Css Modal -->
 
-					<div class="col-md-4">
+    <div id="no-css-modal" class="modal fade" role="dialog">
 
-						<div class="card">
+        <div class="modal-dialog">
 
-							<img class="img-responsive icons" src="img/about-me/php.png">
+            <!-- Modal content-->
 
-							<h4>php</h4>
+            <div class="modal-content">
 
-							<hr>
+                <div class="modal-header">
 
-							<p>
-
-								php is an backend language used for interacting with databases. A mastery of this language allows you to insert data into your database and programatically generate your webpage based on whats in the database, or even user input. For example, different content can be shown to different users through php!
-
-							</p>
-
-						</div>
-
-					</div>
-
-					<div class="col-md-4">
-
-						<div class="card">
-
-							<img class="img-responsive icons" src="img/about-me/mysql.png">
-
-							<h4>MySQL</h4>
-
-							<hr>
-
-							<p>
-
-								MySQL works in tandom with php. Modern day webpages revolve around dynamic content which is stored in a database and programatically (conditionally) called upon. MySQL is the language used to manage, retreive and add content (text/images etc) to and from your database!
-
-							</p>
-
-						</div>
-
-					</div>
-
-				</div>
-
-			</section>
-
-
-
-
-
-			<!-- No Css Modal -->
-
-			<div id="no-css-modal" class="modal fade" role="dialog">
-
-				<div class="modal-dialog">
-
-					<!-- Modal content-->
-
-					<div class="modal-content">
-
-						<div class="modal-header">
-
-							<button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close" data-dismiss="modal">
 
 								<span class="black">
 
@@ -659,317 +669,319 @@
 
 									</p></span>
 
-							</button>
+                    </button>
 
-							<h4 class="modal-title">Thank God for CSS!</h4>
+                    <h4 class="modal-title">Thank God for CSS!</h4>
 
-						</div>
+                </div>
 
-						<div class="modal-body">
+                <div class="modal-body">
 
-							<img class="img-responsive center-block" src="img/about-me/no-css.jpg">
+                    <img class="img-responsive center-block" src="img/about-me/no-css.jpg">
 
-						</div>
+                </div>
 
-						<div class="modal-footer">
+                <div class="modal-footer">
 
-							<button type="button" class="btn btn-primary" data-dismiss="modal">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">
 
-								Close
+                        Close
 
-							</button>
+                    </button>
 
-						</div>
+                </div>
 
-					</div>
+            </div>
 
 
+        </div>
 
-				</div>
+    </div>
 
-			</div>
 
+    <section class="container-fluid larger-container" id="projects">
 
+        <h2>Side Projects</h2>
 
-			<section class="container-fluid larger-container" id="projects">
+        <div class="row">
 
-				<h2>Side Projects</h2>
+            <div class="col-md-8">
 
-				<div class="row">
+                <h3 class="text-left">Micro Coded Instruction Set Processor</h3>
 
-					<div class="col-md-8">
+            </div>
 
-						<h3 class="text-left">Micro Coded Instruction Set Processor</h3>
+        </div>
 
-					</div>
+        <div class="row">
+            <div class="col-md-8">
+                <p>This project was an implementation of a micro coded instruction set processor built in VHDL (VHSIC
+                    Hardware Description Language). The processor is based on the design contained in the textbook <em>Logic
+                        and Computer Design Fundamentals by M Morris Mano & Charles R. Kime</em>.
 
-				</div>
+                    This was an extremely satisfying and rewarding project as it bridged the gap between low level
+                    assembly code (which itself bridged a gap between higher level programming constructs and basic
+                    instructions) and bare metal machine code.</p>
 
-				<div class="row">
-					<div class="col-md-8">
-						<p>This project was an implementation of a micro coded instruction set processor built in VHDL (VHSIC Hardware Description Language). The processor is based on the design contained in the textbook <em>Logic and Computer Design Fundamentals by M Morris Mano & Charles R. Kime</em>.
 
-						This was an extremely satisfying and rewarding project as it bridged the gap between low level assembly code (which itself bridged a gap between higher level programming constructs and basic instructions) and bare metal machine code.</p>
+                <p>The processor was built in an object oriented manor using encapsulation. A good example of this was
+                    building simple <em>M channel x N bit</em> multiplexer components, and using those multiplexers
+                    (along with other logic) to build more complex components such as an arithmetic unit to perform
+                    basic arithmetic.
 
+                    The processor can perform a bunch of basic instructions using the functional unit and main memory,
+                    but can also perform arbitrarily complex instructions due to its support for micro code. This allows
+                    more complex instructions to be performed by sequencing these
 
+                    basic instructions over multiple clock cycles. The implementation for these complex instructions are
+                    stored in the processors control memory and thus these complex instructions can be used as any other
+                    instruction from the point of view of the application programmer. </p>
 
-						<p>The processor was built in an object oriented manor using encapsulation. A good example of this was building simple <em>M channel x N bit</em> multiplexer components, and using those multiplexers (along with other logic) to build more complex components such as an arithmetic unit to perform basic arithmetic.
 
-							 The processor can perform a bunch of basic instructions using the functional unit and main memory, but can also perform arbitrarily complex instructions due to its support for micro code. This allows more complex instructions to be performed by sequencing these
+                <p>Please checkout my <a target="_blank" href="https://github.com/stefano-lupo/Micro-Coded-Processor">GitHub
+                        Repo</a> for the source code and a detailed write up, including step by step diagrams of the
+                    processor running a test program.</p>
 
-							  basic instructions over multiple clock cycles. The implementation for these complex instructions are stored in the processors control memory and thus these complex instructions can be used as any other instruction from the point of view of the application programmer. </p>
+            </div>
 
+            <div class="col-md-4">
 
+                <img class="img-responsive"
+                     src="https://raw.githubusercontent.com/stefano-lupo/Micro-Coded-Processor/master/images/processorSchematic.png">
 
-						<p>Please checkout my <a target="_blank" href="https://github.com/stefano-lupo/Micro-Coded-Processor">GitHub Repo</a> for the source code and a detailed write up, including step by step diagrams of the processor running a test program.</p>
+                <p class="subtitle">Block Diagram of the Processor</p>
 
-					</div>
+            </div>
 
-					<div class="col-md-4">
+        </div>
 
-						<img class="img-responsive" src="https://raw.githubusercontent.com/stefano-lupo/Micro-Coded-Processor/master/images/processorSchematic.png">
 
-						<p class="subtitle">Block Diagram of the Processor</p>
+        <hr>
 
-					</div>
 
-				</div>
+        <div class="row">
 
-				
+            <div class="col-md-8">
 
-				<hr>
+                <h3 class="text-left">Top Down RPG for Android</h3>
 
+            </div>
 
+        </div>
 
-				<div class="row">
+        <div class="row">
+            <div class="col-md-8">
 
-					<div class="col-md-8">
+                <p>
 
-						<h3 class="text-left">Top Down RPG for Android</h3>
+                    Last year I worked as part of a team of 8 to develop a role playing, pseudo 3D, top down game.
 
-					</div>
+                    We developed the game’s entire engine from the ground up using only vanilla Android.
 
-				</div>
+                    We had the option to use a variety of frameworks and libraries such as Unity
 
-				<div class="row">
-					<div class="col-md-8">
+                    in order to get us up and running quickly, but we opted to build everything ourselves as we were all
+                    more interested in understanding the core mechanics of and building a game engine
 
-						<p>
+                    than simply designing the game.
 
-							Last year I worked as part of a team of 8 to develop a role playing, pseudo 3D, top down game. 
+                </p>
 
-							We developed the game’s entire engine from the ground up using only vanilla Android. 
+                <p>
 
-							We had the option to use a variety of frameworks and libraries such as Unity 
+                    I worked on building the core engine for the game (such as the game loop / class structure) as well
+                    as
 
-							in order to get us up and running quickly, but we opted to build everything ourselves as we were all more interested in understanding the core mechanics of and building a game engine  
+                    designing and implementing a system allowing world maps to be built using a simple spreadsheet and
+                    rendered in game allowing the rapid production of levels for the game.
 
-							than simply designing the game.
+                </p>
 
-						</p>
+                <p>The result was a simple Pokemon style game where the player could move around the game world,
+                    interact and fight with NPCs and dynamically change levels.
 
-						<p>
+                    However the game was designed and built in such a way that adding new functionality and levels was
+                    very simple allowing the game to grow in complexity.
 
-							I worked on building the core engine for the game (such as the game loop / class structure) as well as
+                <p>
 
-							designing and implementing a system allowing world maps to be built using a simple spreadsheet and rendered in game allowing the rapid production of levels for the game.
+                    Please see <a href="http://www.github.com/Richard-Lynch/Android-Top-Down-RPG" target="_blank"> this
+                        repo </a> for more info.
 
-						</p> 
+                </p>
 
-						<p>The result was a simple Pokemon style game where the player could move around the game world, interact and fight with NPCs and dynamically change levels. 
+            </div>
 
-							However the game was designed and built in such a way that adding new functionality and levels was very simple allowing the game to grow in complexity.  
+            <div class="col-md-4">
 
-						<p>
+                <img class="img-responsive" src="img/full-map.png">
 
-							Please see <a href="http://www.github.com/Richard-Lynch/Android-Top-Down-RPG" target="_blank"> this repo </a> for more info.
+                <p class="subtitle">The Rendered Game World</p>
 
-						</p>
+                <img class="img-responsive" src="img/map.png">
 
-					</div>
+                <p class="subtitle">The Map Creator</p>
 
-					<div class="col-md-4">
+            </div>
+        </div>
 
-						<img class="img-responsive" src="img/full-map.png">
+    </section>
 
-						<p class="subtitle">The Rendered Game World</p>
+    <section class="container-fluid larger-container" id="game-of-life">
+        <h2>John Conway's Game of Life</h2>
+        <div class="row">
+            <div class="col-lg-8">
+                <p>While you are here why not have a quick go at John Conway's Game of Life?</p>
+                <p>I built this in a couple of hours using Processing which is a great Java framework for doing things
+                    with graphics.
+                </p>
+                <p>It is a fascinating simulation of how populations evolve over time according to 4 simple rules and
+                 can lead to some interesting results. </p>
+                <h4>The Rules</h4>
+                <ol>
+                    <li><p>Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.</p>
+                    </li>
+                    <li><p>Any live cell with two or three live neighbours lives on to the next generation.</p></li>
+                    <li><p>Any live cell with more than three live neighbours dies, as if by overpopulation.</p></li>
+                    <li><p>Any dead cell with exactly three live neighbours becomes a live cell, as if by
+                            reproduction.</p></li>
+                </ol>
+            </div>
+            <div class="col-lg-4">
+                <div id="canvas-container">
+                    <canvas id="game-of-life-canvas" data-processing-sources="game-of-life.pde"></canvas>
+                    <br>
+                    <br>
+                    <button onClick="generate()">Generate</button>
+                    <button onClick="start()">Start</button>
+                    <button onClick="stop()">Stop</button>
+                </div>
+            </div>
+        </div>
 
-						<img class="img-responsive" src="img/map.png">
 
-						<p class="subtitle">The Map Creator</p>
+    </section>
 
-					</div>
-				</div>
 
-			</section>
+    <?php
 
-			<section class="container-fluid" id="game-of-life">
-				<h2>John Conway's Game of Life</h2>
-				<div class="row">
-					<div class="col-lg-8"> 	
-						<p>While you are here why have a quick go at John Conway's Game of Life?</p>
-						<p>I built this in a couple of hours using Processing which is a great Java framework for doing this with graphics. 
-						
-						</p>
-						<p>It is a fascinating simulation of how populations evolve over time according to 4 simple rules:</p>
-						<hr>
-						<ol>
-							<li><p>Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.</p></li>
-							<li><p>Any live cell with two or three live neighbours lives on to the next generation.</p></li>
-							<li><p>Any live cell with more than three live neighbours dies, as if by overpopulation.</p></li>
-							<li><p>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</p></li>
-						</ol>
-					</div>
-					<div class="col-lg-4">
-						<div id="canvas-container" >						
-							<canvas id="game-of-life-canvas" data-processing-sources="game-of-life.pde"></canvas>
-							<br>
-							<br>
-							<button onClick="generate()">Generate</button>
-							<button onClick="start()">Start</button>
-							<button onClick="stop()">Stop</button>
-						</div>
-					</div>
-				</div>
+    require './generic/footer.php';
 
-		
-			</section>
+    ?>
 
-			
+    <script type="text/javascript">
+      var processingInstance;
 
+      function start() {
+        processingInstance = Processing.getInstanceById('game-of-life-canvas');
+        processingInstance.startButtonPressed();
+      }
 
+      function stop() {
+        processingInstance = Processing.getInstanceById('game-of-life-canvas');
+        processingInstance.stopButtonPressed();
+      }
 
+      function generate() {
+        processingInstance = Processing.getInstanceById('game-of-life-canvas');
+        processingInstance.generateButtonPressed();
+      }
 
+    </script>
 
-			<?php
+    <!-- jQuery -->
 
-			require './generic/footer.php';
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-			?>
 
-			<script type="text/javascript">
-				var processingInstance;
-				
-				function start(){
-					processingInstance = Processing.getInstanceById('game-of-life-canvas');
-					processingInstance.startButtonPressed();
-				}
-				
-				function stop(){
-					processingInstance = Processing.getInstanceById('game-of-life-canvas');
-					processingInstance.stopButtonPressed();
-				}
+    <!-- Bootstrap Core JavaScript -->
 
-				function generate() {
-					processingInstance = Processing.getInstanceById('game-of-life-canvas');
-					processingInstance.generateButtonPressed();
-				}
-				
-			</script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-			<!-- jQuery -->
 
-			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- Plugin JavaScript -->
 
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
-			<!-- Bootstrap Core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>
 
-			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <!-- Common JS For All -->
 
+    <script src="js/myscripts/generic.js"></script>
 
-			<!-- Plugin JavaScript -->
+    <script src="js/myscripts/email-validation.js"></script>
 
-			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- Index JS-->
 
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>
+    <script src="js/myscripts/index.js"></script>
 
 
-			<!-- Common JS For All -->
+    <!-- Google Chart Scripts --->
 
-			<script src="js/myscripts/generic.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-			<script src="js/myscripts/email-validation.js"></script>
 
+    <!-- Bar Chart -->
 
+    <script type="text/javascript">
 
-			<!-- Index JS-->
+      google.charts.load('current', {
 
-			<script src="js/myscripts/index.js"></script>
+        'packages': ['bar']
 
+      });
 
+      google.charts.setOnLoadCallback(drawChart);
 
-			<!-- Google Chart Scripts --->
 
-			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      function drawChart() {
 
+        var data = google.visualization.arrayToDataTable([['', 'Mobile', 'PC', 'Tablet'], ['2013', 15, 77, 8], ['2014', 22, 67, 11], ['2015', 33, 56, 11]]);
 
 
-			<!-- Bar Chart -->
+        var options = {
 
-			<script type="text/javascript">
+          colors: ['003F7E', 'Coral', 'ForestGreen'],
 
-				google.charts.load('current', {
+          legend: {
 
-					'packages' : ['bar']
+            position: 'none'
 
-				});
+          },
 
-				google.charts.setOnLoadCallback(drawChart);
+          hAxis: {
 
+            textPosition: 'none'
 
+          },
 
-				function drawChart() {
+          vAxis: {
 
-					var data = google.visualization.arrayToDataTable([['', 'Mobile', 'PC', 'Tablet'], ['2013', 15, 77, 8], ['2014', 22, 67, 11], ['2015', 33, 56, 11]]);
+            title: 'ell'
 
+          }
 
+        };
 
-					var options = {
 
-						colors : ['003F7E', 'Coral', 'ForestGreen'],
+        var chart = new google.charts.Bar(document.getElementById('useage-chart'));
 
-						legend : {
 
-							position : 'none'
+        chart.draw(data, options);
 
-						},
+      }
 
-						hAxis : {
 
-							textPosition : 'none'
+    </script>
 
-						},
 
-						vAxis : {
-
-							title : 'ell'
-
-						}
-
-					};
-
-
-
-					var chart = new google.charts.Bar(document.getElementById('useage-chart'));
-
-
-
-					chart.draw(data, options);
-
-				}
-
-
-
-			</script>
-
-
-
-	</body>
-
+</body>
 
 
 </html>

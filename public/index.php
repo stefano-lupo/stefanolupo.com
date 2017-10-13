@@ -310,7 +310,7 @@
 
                         <p>
 
-                            I'm really drawn to most apsects of technology, programming, engineering, woodworking and
+                            I'm really drawn to most aspects of technology, programming, engineering, woodworking and
                             music.
 
                         </p>

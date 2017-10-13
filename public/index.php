@@ -337,80 +337,6 @@
             science, usually don't take too long to pick up!</p>
 
         <br>
-
-        <div class="row equal">
-
-            <div class="col-md-4">
-
-                <div class="card">
-
-                    <img class="img-responsive icons" src="img/about-me/java.png">
-
-                    <h4>Java</h4>
-
-                    <hr>
-
-                    <p>
-
-                        Java was the first programming language I learned and is probably where I feel most comfortable
-                        if im tackling a large project. I find the object oriented approach extremely satisfying and
-                        enjoy finding the best ways to break the problem up into clean, reusable classes.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-4">
-
-                <div class="card">
-
-                    <img class="img-responsive icons" src="img/about-me/android.png">
-
-                    <h4>Android</h4>
-
-                    <hr>
-
-                    <p>
-
-                        Android is one of my favourite environments to work in (ignoring the long build times for a
-                        moment..). I recently built a <a href="https://github.com/Richard-Lynch/Android-Top-Down-RPG"
-                                                         target="_blank">top down RPG </a> in vanilla Android with a
-                        group of friends and thoroughly enjoyed it. I really hope to work on a large scale Android
-                        project somewhere down to the line.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-4">
-
-                <div class="card">
-
-                    <img class="img-responsive icons" src="img/about-me/c.png">
-
-                    <h4>C</h4>
-
-                    <hr>
-
-                    <p>
-
-                        Working in C is extremely gratifying (and frustrating). My Data Structures and Algorithms module
-                        was taught through C and implementing things like graph traversal algorithms (eg Dijkstra's
-                        Algorithm) at such a low level (as well as working in ARM Assembler) really gave me an insight
-                        into writing efficient code and how it was all implemented under the hood.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
         <div class="row equal">
 
             <div class="col-md-4">
@@ -493,6 +419,78 @@
 
         </div>
 
+        <div class="row equal">
+
+            <div class="col-md-4">
+
+                <div class="card">
+
+                    <img class="img-responsive icons" src="img/about-me/java.png">
+
+                    <h4>Java</h4>
+
+                    <hr>
+
+                    <p>
+
+                        Java was the first programming language I learned and is probably where I feel most comfortable
+                        if im tackling a large project. I find the object oriented approach extremely satisfying and
+                        enjoy finding the best ways to break the problem up into clean, reusable classes.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card">
+
+                    <img class="img-responsive icons" src="img/about-me/android.png">
+
+                    <h4>Android</h4>
+
+                    <hr>
+
+                    <p>
+
+                        Android is one of my favourite environments to work in (ignoring the long build times for a
+                        moment..). I recently built a <a href="https://github.com/Richard-Lynch/Android-Top-Down-RPG"
+                                                         target="_blank">top down RPG </a> in vanilla Android with a
+                        group of friends and thoroughly enjoyed it. I really hope to work on a large scale Android
+                        project somewhere down to the line.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card">
+
+                    <img class="img-responsive icons" src="img/about-me/c.png">
+
+                    <h4>C</h4>
+
+                    <hr>
+
+                    <p>
+
+                        Working in C is extremely gratifying (and frustrating). My Data Structures and Algorithms module
+                        was taught through C and implementing things like graph traversal algorithms (eg Dijkstra's
+                        Algorithm) at such a low level (as well as working in ARM Assembly) really gave me an insight
+                        into writing efficient code and how it was all implemented under the hood.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
     </section>
 
 

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>John Conway&#39;s Game of Life in Processing | Stefano Lupo Tech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="$(document).ready(function () {         var forkMe = $(&apos;#forkMe&apos;)         var crap = $(&apos;#forkMe &amp;gt; .fancybox&apos;);         var good = crap.find(&apos;img&apos;);         console.log(">
+<meta name="keywords" content="Processing Java Processing.js John Conway&#39;s Game Of Life">
+<meta property="og:type" content="article">
+<meta property="og:title" content="John Conway&#39;s Game of Life in Processing">
+<meta property="og:url" content="http://stefanolupo.tech/blog/2017/10/17/GameOfLife/index.html">
+<meta property="og:site_name" content="Stefano Lupo Tech">
+<meta property="og:description" content="$(document).ready(function () {         var forkMe = $(&apos;#forkMe&apos;)         var crap = $(&apos;#forkMe &amp;gt; .fancybox&apos;);         var good = crap.find(&apos;img&apos;);         console.log(">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png">
+<meta property="og:image" content="https://s3-eu-west-1.amazonaws.com/stefano-lupo-blog-photos/game-of-life/GameOfLife.gif">
+<meta property="og:updated_time" content="2017-10-24T22:52:44.441Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="John Conway&#39;s Game of Life in Processing">
+<meta name="twitter:description" content="$(document).ready(function () {         var forkMe = $(&apos;#forkMe&apos;)         var crap = $(&apos;#forkMe &amp;gt; .fancybox&apos;);         var good = crap.find(&apos;img&apos;);         console.log(">
+<meta name="twitter:image" content="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Stefano Lupo Tech</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">Programming, tech and other interesting things.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="http://stefanolupo.tech">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://stefanolupo.tech/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-GameOfLife" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/10/17/GameOfLife/" class="article-date">
+  <time datetime="2017-10-17T17:27:30.000Z" itemprop="datePublished">17-10-2017</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      John Conway&#39;s Game of Life in Processing
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+<br><br>
+<div style="position:relative; top:0; left:0">
+    <a id="forkMe" href="https://github.com/stefano-lupo/Game-Of-Life" target="_blank" rel="external">
+    <img style="position: absolute; left:0" src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png">
+    </a>
+    <img src="https://s3-eu-west-1.amazonaws.com/stefano-lupo-blog-photos/game-of-life/GameOfLife.gif">
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        var forkMe = $('#forkMe')
+        var crap = $('#forkMe > .fancybox');
+        var good = crap.find('img');
+        console.log(good);
+        forkMe.append(good);
+        crap.remove();
+    })
+   
+</script>
+
+<h3 id="Checkout-the-live-demo-on-my-Home-Page"><a href="#Checkout-the-live-demo-on-my-Home-Page" class="headerlink" title="Checkout the live demo on my Home Page!"></a>Checkout the live demo on my <a href="http://www.stefanolupo.tech#game-of-life" target="_blank" rel="external">Home Page!</a></h3><p>I was sitting in a lecture the other day when the lecturers screen saver appeared on the projector. It immediately drew all of our attention as it was a live simulation of <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank" rel="external">John Conway’s Game of Life</a>. I had read and watched videos about this topic before and it is quite an interesting simulation. It acts as a model for population evolves over time and given the right inputs (or not!) it can produce some fascinating results for such a simple concept. I first heard about it from the same place I hear most of the interesting facts about the world, from Mr Michael Stevens aka <a href="https://www.youtube.com/user/Vsauce" target="_blank" rel="external">Vsauce</a>. If you haven’t heard of Vsauce you should definitely check out his YouTube channel. He makes extremely interesting videos on a huge variety of topics ranging from science and math to philosophy and psychology and his content is pretty widely accepted as some of the best on YouTube in that space. </p>
+<p>Here is a quick snippet from the video where he mentions it (~90 seconds and it <em>should</em> start from the right point!)</p>
+<div style="float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;"><br>    <iframe style="position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;" src="https://www.youtube.com/embed/aNgE_hf41NY?start=123" frameborder="0" allowfullscreen><br>    </iframe><br></div>
+
+<p>So just to reiterate what Michael said (or for those who didn’t feel like watching), the simulation contains a grid of cells which are either alive (lit up) or dead (dark) at any point in time. The interesting part comes from the rules which are applied to this grid of cells which govern how the cells survive, are killed and are reborn. The most common ruleset is the following:</p>
+<blockquote>
+<ol>
+<li>Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.</li>
+<li>Any live cell with more than three live neighbours dies, as if by overpopulation.</li>
+<li>Any live cell with two or three live neighbours lives on to the next generation.</li>
+<li>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
+</ol>
+</blockquote>
+<p>With those four simple rules, some really interesting patterns and phenomena occur such as oscilators and spaceships which can traverse the grid! This article is just to show a simple implementation of The Game of Life in Processing that I wrote on a <del>hungover</del> lazy Sunday afternoon and won’t be exploring any of the outcomes in any great detail, but you can find a bunch more info from people who know a whole lot more about it than I do <a href="http://web.stanford.edu/~cdebs/GameOfLife/" target="_blank" rel="external">right here!</a></p>
+<h1 id="The-Processing-Code"><a href="#The-Processing-Code" class="headerlink" title="The Processing Code"></a>The Processing Code</h1><p>The first thing I did was decide on the data structure I would use to represent the grid. The name pretty much gives the game away as a grid is basically a synonym for a matrix or 2D array. Next I declared some constans and global variables which would be useful later on. The only one of note here for now is <code>SQUARE_SIZE</code> which will be the number of pixels each cell will be, the rest are self-explanatory or will be explained later (you decide!).</p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">final</span> <span class="built_in">int</span> SQUARE_SIZE = <span class="number">10</span>;</div><div class="line"><span class="keyword">final</span> <span class="built_in">float</span> GRID_SEED_THRESHOLD = <span class="number">0.8</span>;</div><div class="line"><span class="keyword">final</span> <span class="built_in">boolean</span> DRAW_UI_INFO = <span class="keyword">false</span>;</div><div class="line"></div><div class="line"><span class="built_in">int</span> numRows, numCols;</div><div class="line">Cell[][] grid;</div><div class="line"><span class="built_in">boolean</span> settingUp = <span class="keyword">true</span>;</div><div class="line"><span class="built_in">int</span> generation = <span class="number">0</span>;</div><div class="line"><span class="built_in">int</span> numberAlive = <span class="number">0</span>;</div></pre></td></tr></table></figure>
+<p>Next the good old <code>void setup()</code>. Here we define the size of our canvas, do some initialization and figure out the number of rows and columns of cells we can have. I was lazy and purposely set my <code>SQUARE_SIZE = 10</code> as I knew the size of my canvas would be a multiple of 10 meaning I wouldn’t have any remainder pixels.</p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> <span class="title">setup</span>() &#123;</div><div class="line">    <span class="built_in">size</span>(<span class="number">900</span>, <span class="number">600</span>);</div><div class="line">    numRows = <span class="built_in">width</span>/SQUARE_SIZE;</div><div class="line">    numCols = <span class="built_in">height</span>/SQUARE_SIZE;</div><div class="line">    grid = initGrid();</div><div class="line">    generateRandomGrid();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The <code>initGrid()</code> function just creates instances of a <code>Cell</code> class (which will be created later) and slots them into a 2D array to act as our <code>grid</code>. </p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Cell[][] initGrid() &#123;</div><div class="line">    Cell[][] grid = <span class="keyword">new</span> Cell[numRows][numCols];</div><div class="line">    <span class="keyword">for</span> (<span class="built_in">int</span> i=<span class="number">0</span>; i&lt;numRows; i++ ) &#123;</div><div class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> j=<span class="number">0</span>; j&lt;numCols; j++) &#123;</div><div class="line">            grid[i][j] = <span class="keyword">new</span> Cell();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> grid;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The other function here is <code>generateRandomGrid()</code>. This just iterates over our global <code>grid</code> and randomly populates some cells with living cells. This is handy for just creating a random grid to run in order to observe the simulation.</p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> generateRandomGrid() &#123;</div><div class="line">    <span class="keyword">for</span> (<span class="built_in">int</span> i=<span class="number">0</span>; i&lt;numRows; i++) &#123;</div><div class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> j=<span class="number">0</span>; j&lt;numCols; j++) &#123;</div><div class="line">            <span class="built_in">float</span> r = <span class="built_in">random</span>(<span class="number">1</span>);</div><div class="line">            <span class="keyword">if</span> (r &gt; GRID_SEED_THRESHOLD) &#123;</div><div class="line">                grid[i][j].alive = <span class="keyword">true</span>;</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                grid[i][j].alive = <span class="keyword">false</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Next up is the other good old - <code>void draw()</code>. This is split in two by an if statement which tests the <code>settingUp</code> boolean we defined earlier. In setup mode, you can bring cells to life by left clicking and kill off cells by right clicking by making calls on the <code>Cell</code> objects themselves (these will be shown later). This requires a method to convert the mouse click coordinates into row and column indices into the <code>grid</code> and this is done using the <code>getIndex(mouseX, mouseY)</code> function. Finally in setup mode, we check for some key strokes <code>&#39;s&#39;</code> and <code>&#39;g&#39;</code> and respond to them by starting the simulation and regenerating a new random board respectively. </p>
+<p>The other half (in running mode), simply applys Conway’s rules to the current board by calling <code>applyRules()</code> and checks if the <code>&#39;r&#39;</code> key has been preset, which initiates a reset of the board through <code>reset()</code>.</p>
+<p>Finally for both <code>settingUp</code> and <code>!settingUp</code> (simulating), we make a call to <code>drawGrid()</code> which simply draws grid full of living cells.</p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> <span class="title">draw</span>() &#123;</div><div class="line">    <span class="keyword">if</span> (settingUp) &#123;</div><div class="line">        <span class="built_in">frameRate</span>(<span class="number">30</span>);</div><div class="line">        <span class="built_in">int</span>[] coords = getIndex(<span class="built_in">mouseX</span>, <span class="built_in">mouseY</span>);</div><div class="line">        <span class="built_in">int</span> i = coords[<span class="number">0</span>];</div><div class="line">        <span class="built_in">int</span> j = coords[<span class="number">1</span>];</div><div class="line">        <span class="keyword">if</span> (<span class="built_in">mousePressed</span>) &#123;</div><div class="line">            <span class="keyword">if</span> (mouseButton == LEFT) &#123;</div><div class="line">                grid[i][j].create();</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                grid[i][j].kill();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (<span class="built_in">keyPressed</span>) &#123;</div><div class="line">            <span class="keyword">if</span> (<span class="built_in">key</span> == <span class="string">'s'</span>) &#123;</div><div class="line">                settingUp = <span class="keyword">false</span>;</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">key</span> ==<span class="string">'g'</span>) &#123;</div><div class="line">                generateRandomGrid();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="built_in">frameRate</span>(<span class="number">15</span>);</div><div class="line">        applyRules();</div><div class="line">        <span class="keyword">if</span> (<span class="built_in">keyPressed</span> &amp;&amp; <span class="built_in">key</span> == <span class="string">'r'</span>) &#123;</div><div class="line">            reset();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    drawGrid();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>You may have have noticed the calls to <code>frameRate(30)</code> and <code>frameRate(15)</code>. These (obviously) adjust the frame rate and are are used to slow the simulation down a bit so that we can better see whats going on with how the cells are interacting.</p>
+<p>The bodies of the methods mentioned above are given below.</p>
+<h3 id="getIndex-mouseX-mouseY"><a href="#getIndex-mouseX-mouseY" class="headerlink" title="getIndex(mouseX, mouseY)"></a>getIndex(mouseX, mouseY)</h3><p>This returns valid indices into the <code>grid</code>. This actually caused some problems as clicking and dragging the mouse off the canvas actually caused processing to pass me coordinates that were out of range of the canvas (ie coordinates &lt; 0 or coordinates &gt; canvas height etc). A simple bit of logic can be used to combat this however. Taking <code>x</code> as an example coordinate we can:</p>
+<ol>
+<li><code>int largerThanZero = max(x, 0)</code> - This ensures that <code>x</code> is non-negative</li>
+<li><code>min(largerThanZero, width-1)</code> - This ensures that <code>x</code> is not larger than the size of the canvas.</li>
+</ol>
+<p>Now that we have <em>cleaned</em> x and y coordinates, we can use integer division to get the nearest cell in our grid and return those as the indices.</p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">int</span>[] getIndex(<span class="built_in">int</span> x, <span class="built_in">int</span> y) &#123;</div><div class="line">    <span class="built_in">int</span>[] cleanedCoords = &#123;<span class="built_in">min</span>(<span class="built_in">max</span>(x, <span class="number">0</span>), <span class="built_in">width</span><span class="number">-1</span>), <span class="built_in">min</span>(<span class="built_in">max</span>(y, <span class="number">0</span>), <span class="built_in">height</span><span class="number">-1</span>) - <span class="number">1</span>&#125;;</div><div class="line">    cleanedCoords[<span class="number">0</span>] = cleanedCoords[<span class="number">0</span>] / SQUARE_SIZE;</div><div class="line">    cleanedCoords[<span class="number">1</span>] = cleanedCoords[<span class="number">1</span>] / SQUARE_SIZE;</div><div class="line">    <span class="keyword">return</span> cleanedCoords;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="applyRules"><a href="#applyRules" class="headerlink" title="applyRules()"></a>applyRules()</h3><p>This is where the <em>interesting</em> logic of the simulation comes in. The rules were given above but here is a quick refresher in some weird pseudo-peseudoish-code: </p>
+<blockquote>
+<ol>
+<li>(&lt;2 neighbours) =  DIE</li>
+<li>(&gt;3 neighbours) = DIE.</li>
+<li>(2 &lt;= neighbours &lt;= 3) &amp;&amp; currentlyAlive = LIVE</li>
+<li>(neighbours == 3) &amp;&amp; currentlyDead = REBIRTH</li>
+</ol>
+</blockquote>
+<p>A key concept here is that rules apply to all of the cells in the grid for a given generation <strong>simultaenously</strong>. That is, you can’t update the board as you iterate over it checking the cells of the current generation. We need a snapshot of the board in its current state to compare each cell against. Or more simply, we create a new board on each generation, fill <strong>that</strong> board based on the previous generation rather than updating the old board.</p>
+<p>This function then is rather simple. We create our new grid using <code>initGrid()</code> and iterate over the board. For each cell, we check how many neighbours it has using the (yet to be defined) <code>getNumberOfNeigbours(rowIndex, columnIndex)</code> function, apply Conway’s rules to that cell and figure out if it should be alive or dead in the next grid and update our <strong>new</strong> grid accordingly! Again we use some <code>Cell</code> instance methods <code>kill(), create()</code>(bring back to life) and <code>age()</code> that cell. Ageing has no effect on the simulation but is just used to set the colour of the cell in order to get a visual representation of how long a given cell has been around for.</p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> applyRules() &#123;</div><div class="line">    <span class="comment">// Create our NEW grid for the next generation</span></div><div class="line">    Cell[][] nextGrid = initGrid();</div><div class="line"></div><div class="line">    <span class="comment">// This is just used to show the user how many cells are currently living</span></div><div class="line">    numberAlive = <span class="number">0</span>;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="built_in">int</span> i=<span class="number">0</span>; i&lt;numRows; i++) &#123;</div><div class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> j=<span class="number">0</span>; j&lt;numCols; j++) &#123;</div><div class="line">            <span class="built_in">int</span> numNeighbours = getNumberOfNeighbours(i, j);</div><div class="line">            <span class="keyword">if</span> (numNeighbours &lt; <span class="number">2</span> || numNeighbours &gt; <span class="number">3</span>) &#123;</div><div class="line">                nextGrid[i][j].kill();</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                <span class="comment">// Two or three neighbours</span></div><div class="line">                <span class="keyword">if</span> (!grid[i][j].alive &amp;&amp; numNeighbours == <span class="number">3</span>) &#123;</div><div class="line">                    nextGrid[i][j].create();</div><div class="line">                    numberAlive ++;</div><div class="line">                &#125; <span class="keyword">else</span> &#123;</div><div class="line">                    <span class="comment">// Alive with two or 3 neighbours</span></div><div class="line">                    Cell oldCell = grid[i][j];</div><div class="line">                    oldCell.age();</div><div class="line">                    nextGrid[i][j] = oldCell;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    grid = nextGrid;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>And of course the <code>getNumberOfNeighbours(row, column)</code> function will return the number of neighbours the cell at that position has. For the general case each cell has 8 possible neighbours - 3 above it, 2 on either side of it and 3 below it. However (literal) edge cases exist for cells that are on the border.</p>
+<p>To handle these we can define the max and min allowed values for the row an column, and iterate from <code>rowMin</code> to <code>rowMax</code> and inside that iterate from <code>colMin</code> to <code>colMax</code>. In the general case where <code>r</code> and <code>c</code> are the cell in questions row and column:</p>
+<ul>
+<li><code>rowMin</code> = <code>r-1</code></li>
+<li><code>rowMax</code> = <code>r+1</code></li>
+<li><code>colMin</code> = <code>c-1</code></li>
+<li><code>colMax</code> = <code>c+1</code></li>
+</ul>
+<p>However we apply the same trick of <strong>maximizing</strong> any potentially <strong>negative</strong> rows/cols with <strong>0</strong> and <strong>minimizing</strong> any rows/cols that can be <strong>greater than the <code>grid</code> dimensions</strong> with the <code>numRows</code> and <code>numCols</code> respectively. </p>
+<p>Finally we can iterate over the 9 adjacent cells, and perform one last check that we aren’t at the <code>row</code> and <code>column</code> that corresponds to ourselves (as we don’t want to count ourselves!).<br><figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">int</span> getNumberOfNeighbours(<span class="built_in">int</span> r, <span class="built_in">int</span> c) &#123;</div><div class="line">    <span class="built_in">int</span> numberOfNeighbours = <span class="number">0</span>;</div><div class="line"></div><div class="line">    <span class="built_in">int</span> rowMin = <span class="built_in">max</span>(r<span class="number">-1</span>, <span class="number">0</span>);</div><div class="line">    <span class="built_in">int</span> rowMax = <span class="built_in">min</span>(r+<span class="number">1</span>, numRows<span class="number">-1</span>);</div><div class="line"></div><div class="line">    <span class="built_in">int</span> colMin = <span class="built_in">max</span>(c<span class="number">-1</span>, <span class="number">0</span>);</div><div class="line">    <span class="built_in">int</span> colMax = <span class="built_in">min</span>(c+<span class="number">1</span>, numCols<span class="number">-1</span>);</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="built_in">int</span> row = rowMin; row &lt;= rowMax; row++) &#123;</div><div class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> col = colMin; col &lt;= colMax; col++) &#123;</div><div class="line">            <span class="keyword">if</span> (row != r || col != c) &#123;</div><div class="line">                <span class="keyword">if</span> (grid[row][col].alive) &#123;</div><div class="line">                    numberOfNeighbours ++;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> numberOfNeighbours;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="drawGrid"><a href="#drawGrid" class="headerlink" title="drawGrid()"></a>drawGrid()</h3><p>Finally after all that work it’s time to draw something to the screen. This part is easy, just iterate over the grid and call <code>cell.drawCell(row, column)</code> on each cell in the grid and they will handle drawing themsevles. The only other things in this method are clearing the prevously drawn cells by redrawing a black backgroun with <code>background(0)</code> and (conditionally) drawing an overlay containing some info about the simulation (how many are currently alive / generation number etc). </p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> drawGrid() &#123;</div><div class="line">    <span class="built_in">background</span>(<span class="number">0</span>);</div><div class="line">    <span class="keyword">for</span> (<span class="built_in">int</span> i=<span class="number">0</span>; i&lt;numRows; i++) &#123;</div><div class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> j=<span class="number">0</span>; j&lt;numCols; j++) &#123;</div><div class="line">            grid[i][j].drawCell(i,j);   </div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">if</span>(DRAW_UI_INFO) &#123;</div><div class="line">        drawUI();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="reset"><a href="#reset" class="headerlink" title="reset()"></a>reset()</h3><p>The last function we need is one to reset the board and it is pretty self explanatory - it puts us back in setup mode, recreates a fresh grid and reinitializes the generation and number of alive cells to 0. In Java, we can rest assured that garbage collection will handle freeing up our now out of scope old grid. </p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> reset() &#123;</div><div class="line">    settingUp = <span class="keyword">true</span>;</div><div class="line">    grid = initGrid();</div><div class="line">    generation = <span class="number">0</span>;</div><div class="line">    numberAlive = <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="The-Cell-Class"><a href="#The-Cell-Class" class="headerlink" title="The Cell Class"></a>The Cell Class</h2><p>Almost there, just a super basic class to represent our <code>Cell</code>s. The only interesting thing about this Cell class is the concept of “colour-aging”. As discussed, I thought it would be nice to have some visual feedback on how long a certain cell had been around for. So the cells start out with a <code>blue</code> value of 255 (fully blue) and a <code>red</code> value of 0 (no red). On each tick a cell survives, we remove <code>COLOUR_STEP</code> from it’s <code>blue</code> value and add <code>COLOUR_STEP</code> to it’s red value. This allows the colour of the cells to change over time based on how many generations they have been alive for.</p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">    <span class="built_in">boolean</span> alive;</div><div class="line">    <span class="built_in">int</span> <span class="built_in">red</span>;</div><div class="line">    <span class="built_in">int</span> <span class="built_in">blue</span>;</div><div class="line"></div><div class="line">    <span class="comment">// This controls how fast the cells "colour-age"</span></div><div class="line">    <span class="keyword">final</span> <span class="keyword">static</span> <span class="built_in">int</span> COLOUR_STEP = <span class="number">2</span>;</div><div class="line"></div><div class="line">    Cell() &#123;</div><div class="line">        alive = <span class="keyword">false</span>;</div><div class="line">        <span class="built_in">red</span> = <span class="number">0</span>;</div><div class="line">        <span class="built_in">blue</span> = <span class="number">255</span>;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="comment">// Draws the cell with the appropriate "colour-age" at the appropriate position</span></div><div class="line">    <span class="keyword">void</span> drawCell(<span class="built_in">int</span> row, <span class="built_in">int</span> col) &#123;</div><div class="line">        <span class="keyword">if</span> (alive) &#123;</div><div class="line">            <span class="built_in">int</span> x = row*SQUARE_SIZE;</div><div class="line">            <span class="built_in">int</span> y = col*SQUARE_SIZE;</div><div class="line">            <span class="built_in">fill</span>(<span class="built_in">red</span>, <span class="number">0</span>, <span class="built_in">blue</span>);</div><div class="line">            <span class="built_in">rect</span>(x, y, SQUARE_SIZE, SQUARE_SIZE);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="comment">// Kill off the cell and set its "colour-age" back to fully blue</span></div><div class="line">    <span class="keyword">void</span> kill() &#123;</div><div class="line">        <span class="keyword">this</span>.alive = <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">this</span>.<span class="built_in">red</span> = <span class="number">0</span>;</div><div class="line">        <span class="keyword">this</span>.<span class="built_in">blue</span> = <span class="number">255</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// Bring the cell back to life</span></div><div class="line">    <span class="keyword">void</span> create() &#123;</div><div class="line">        <span class="keyword">this</span>.alive = <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// Age the cell from blue to red for each tick they survive.</span></div><div class="line">    <span class="keyword">void</span> age() &#123;</div><div class="line">        <span class="keyword">if</span> (<span class="built_in">blue</span> &gt; <span class="number">20</span>) &#123;</div><div class="line">            <span class="keyword">this</span>.<span class="built_in">blue</span> -= COLOUR_STEP;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (<span class="built_in">red</span> &lt; <span class="number">255</span>) &#123;</div><div class="line">            <span class="keyword">this</span>.<span class="built_in">red</span> += COLOUR_STEP;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="Give-it-a-go"><a href="#Give-it-a-go" class="headerlink" title="Give it a go!"></a>Give it a go!</h1><p>That’s it! Now we have our own Conway’s Game of Life. I’m sure this is nothing new and that there is a tonne of them already written in Processing, but I just decided to write my own for fun! Only after I built it in Processing did I realise I could use processing.js to run it in a browser!</p>
+<p>Feel free to play around with the simulator on <a href="http://stefanolupo.tech#game-of-life">my homepage</a>.<br>Thanks for reading! </p>
+
+<script type="text/javascript">
+      var processingInstance;
+
+      function start() {
+        processingInstance = Processing.getInstanceById('game-of-life-canvas');
+        processingInstance.startButtonPressed();
+      }
+
+      function stop() {
+        processingInstance = Processing.getInstanceById('game-of-life-canvas');
+        processingInstance.stopButtonPressed();
+      }
+
+      function generate() {
+        processingInstance = Processing.getInstanceById('game-of-life-canvas');
+        processingInstance.generateButtonPressed();
+      }
+
+    </script>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://stefanolupo.tech/blog/2017/10/17/GameOfLife/" data-id="cj967jv4s0000blqjlm08fpks" class="article-share-link">Share</a>
+      
+        <a href="http://stefanolupo.tech/blog/2017/10/17/GameOfLife/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Processing-Java-Processing-js-John-Conway-s-Game-Of-Life/">Processing Java Processing.js John Conway's Game Of Life</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2017/09/19/Airport-Web-Sockets/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">WebSocket Chat Room</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Web-Programming/">Web Programming</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Woodworking/">Woodworking</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2017/10/17/GameOfLife/">John Conway&#39;s Game of Life in Processing</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2017/09/19/Airport-Web-Sockets/">WebSocket Chat Room</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2017/09/02/hexagonPatioTable/">Octagonal Patio Table</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Stefano Lupo<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="http://stefanolupo.tech" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'stefanolupo-tech';
+  
+  var disqus_url = 'http://stefanolupo.tech/blog/2017/10/17/GameOfLife/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+<script src="/blog/js/script.js"></script>
+
+  </div>
+</body>
+</html>

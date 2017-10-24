@@ -1,12 +1,12 @@
 ---
-title: Airport WebSockets
+title: WebSocket Chat Room
 layout: page
 categories: Web Programming
 date: 2017-09-19 14:37:15
 tags: WebSockets Node Javascript SSH Raspberry Pi
 photos:
-- https://s3-eu-west-1.amazonaws.com/stefano-lupo-blog-photos/websocket-chat-server/chatroom.png
 ---
+![Websocket Chat Room](https://s3-eu-west-1.amazonaws.com/stefano-lupo-blog-photos/websocket-chat-server/chatroom.png)
 So I was just about to board my flight to Amsterdam when we were informed that the flight was to be delayed by three hours (guess what airline I was flying with..). I started thinking of things to do to kill the time, but had decided not to bring my laptop with me. Fortunately however I have my router port forwarded so I have ssh access to my Raspberry Pi (which I leave on 24/7 since it uses a whole 1.2 Watts) from anywhere I have an internet connection. So I pulled out my phone and fired up JuiceSSH and started thinking what I could do..
 
 ## What Are WebSockets?

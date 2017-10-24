@@ -5,8 +5,8 @@ categories: Woodworking
 date: 2017-09-02 17:56:28
 tags: Woodworking Octagonal Patio Table DIY Steve Ramsey
 photos: 
-- https://s3-eu-west-1.amazonaws.com/stefano-lupo-blog-photos/patio-table/20170610_180608.jpg
 ---
+![The Finished Table](https://s3-eu-west-1.amazonaws.com/stefano-lupo-blog-photos/patio-table/20170610_180608.jpg)
 So back at the start of summer just as I was finishing my exams, I was snooping around my house looking for something that was old / damaged that I knew would be annoying my Mum. After about a month straight of studying (and writing way more ARM Assembly than one should ever have to) I really wanted to build something. Also at this point I had spent all my money on tools and hadn't yet *built* anything with them (hence me looking for a project that my mum would ~~fund~~ be interested in),  so was feeling a bit dumb at this stage. 
 
 I finally looked out the back and realised our patio table was pretty destroyed after sitting out in Irish weather for about 8 years. 

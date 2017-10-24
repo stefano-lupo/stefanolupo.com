@@ -1227,8 +1227,8 @@ p .enlarged-stat {
 
 /* Game of Life */
 #canvas-container {
-   width: 100%;
-   text-align:center;
+    width: 100%;
+    text-align:center;
 }
 
 #game-of-life-canvas {
@@ -1238,5 +1238,5 @@ p .enlarged-stat {
 }
 
 canvas {
-   display: inline;
+    display: inline;
 }

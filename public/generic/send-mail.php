@@ -9,7 +9,7 @@ $emailAddress=$postArray[3];
 $message=$postArray[4];
 
 
-$to='info@stefanolupo.tech';
+$to='stefano@stefanolupo.tech';
 $subject='Mail from stefanolupo.tech';
 
 $headers='MIME-Version: 1.0'."\r\n";

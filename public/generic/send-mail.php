@@ -9,12 +9,19 @@ $emailAddress=$postArray[3];
 $message=$postArray[4];
 
 
-$to='stefano@stefanolupo.tech';
-$subject='Mail from stefanolupo.tech';
+$to='stefano@stefanolupo.com';
+$subject='Mail from stefanolupo.com';
 
 $headers='MIME-Version: 1.0'."\r\n";
 $headers.='Content-type: text/html; charset=iso-8859-1'."\r\n";
-$headers.='From: '.$fn.' '.$ln.' <'.$emailAddress.'>'."\r\n";
+
+// Causes DKIM to fail
+//$headers.='From: '.$fn.' '.$ln.' <'.$emailAddress.'>'."\r\n";
+$headers.='From: Web Mail <webmail@emailer.stefanolupo.com>'."\r\n";
+
+$headers.='Reply-To: '.$fn.' '.$ln.' <'.$emailAddress.'>'."\r\n";
+$headers.='Sender: Web Mail <webmail@emailer.stefanolupo.com>'."\r\n";
+
 
 /*$message = str_replace("\r\n", "<br>", $message);*/
 
@@ -36,26 +43,6 @@ $email='
 
 //send mail to me
 mail($to,$subject,$email,$headers);
-
-//send mail to client for address book
-$headers2='MIME-Version: 1.0'."\r\n";
-$headers2.='Content-type: text/html; charset=iso-8859-1'."\r\n";
-$headers2.='From: Stefano Lupo Web Design <info@stefanolupo.tech>'."\r\n";
-
-
-mail($emailAddress,"Stefano Lupo Web Design Confirmation","Your message has been successfully sent.<br>Please add this contact to your address book to ensure the response will not be marked as junkmail.<br><br> Thank you!
-<br>
-------------------------------
-<br>
-Lupo Web Design
-<br>
-Phone: 086 1727 160
-<br>
-Email: info@stefanolupo.tech
-<br>
-Website: www.stefanolupo.tech
-<br>
-Facebook: https://www.facebook.com/StefanoLupoWebDesign/", $headers2);
 
 
 ?>

@@ -143,7 +143,7 @@ echo '			<footer class="container-fluid">
 
 								<div class="col-xs-12">
 
-									<a target="_blank" alt="Phil McNally Interior Design Link" href="http://pmninteriordesign.com"> <img class="img-responsive" src="img/footer/phil-logo.png" alt="Phil McNally Logo"></a>
+									<a target="_blank" alt="Phil McNally Interior Design Link" href="http://pmninteriordesign.stefanolupo.com"> <img class="img-responsive" src="img/footer/phil-logo.png" alt="Phil McNally Logo"></a>
 
 								</div>
 
@@ -199,7 +199,7 @@ echo '			<footer class="container-fluid">
 
 							<p>
 
-								<a class="no-decoration" href="mailto:webdesign@stefanolupo.tech" target="_top"><i class="fa fa-fw fa-envelope-o btn-social btn-outline"></i>webdesign@stefanolupo.tech</a>
+								<a class="no-decoration" href="mailto:webdesign@stefanolupo.com" target="_top"><i class="fa fa-fw fa-envelope-o btn-social btn-outline"></i>webdesign@stefanolupo.tech</a>
 
 							</p>
 
@@ -291,7 +291,7 @@ echo '			<footer class="container-fluid">
 
 						<p>
 
-							<i class="fa fa-copyright" aria-hidden="true"></i> Stefano Lupo Web Design 2017
+							<i class="fa fa-copyright" aria-hidden="true"></i> Stefano Lupo Web Design '. date("Y") .  '
 
 						</p>
 
@@ -301,7 +301,7 @@ echo '			<footer class="container-fluid">
 
 						<p class="text-right">
 
-							Designed by <a href="http://www.stefanolupo.tech/web-design.php">Stefano Lupo Web Design</a>
+							Designed by <a href="http://www.stefanolupo.com/web-design.php">Stefano Lupo Web Design</a>
 
 						</p>
 

@@ -1,55 +1,50 @@
+
+function animateToValue(element, value) {
+  $({dummy: 0}).animate(
+    {dummy: 1},
+    {
+      step: (now, fx) => {
+        $(element).text(Math.ceil(now * value));
+      },
+      duration: 5000,
+      start: () => console.log("Started animating for " + value),
+      done: () =>console.log("Done for " + value)
+    })
+}
+
 $(document).ready(function() {
+  
+  var animationStarted = false;
 
-$(window).scroll(function () {
-  var currentY = $(this).scrollTop();
-  var mobileFirst = $("#mobile-first").offset().top;
-  var solution = $("#solution").offset().top;
-  var mobileStartLoc = $("#non-mobile-friendly-mobile-start-animation").offset().top;
-  var animated = false;
-  var width = $(window).width();
-  var isMobile = false;
-
-  if (width < 600) {
-    isMobile = true;
+  function startAnimation() {
+    $('.count').each((index, element) => {
+      $(element).removeClass("hide-me-keep-space");
+      var finalValue = $(element).text();
+      animateToValue(element, finalValue);
+    });
   }
 
-  $('#percentage-stat').addClass('hide-me-keep-space');
-        if (!isMobile) {
-
-            if ((animated === false) && (currentY >= mobileFirst) && (currentY <= solution)) {
-                $('#percentage-stat').removeClass('hide-me-keep-space');
-                $('.count').each(function () {
-                    $(this).prop('Counter', 0).animate({
-                        Counter: $(this).text()
-                    }, {
-                        duration: 4000,
-                        easing: 'swing',
-                        step: function (now) {
-                            $(this).text(Math.ceil(now));
-                        }
-                    });
-                });
-                animated = true;
-            }
-        } else {
-            if ((animated === false) && (currentY >= (mobileStartLoc - 600)) && (currentY <= solution)) {
-                $('#percentage-stat').removeClass('hide-me-keep-space');
-                $('.count').each(function () {
-                    $(this).prop('Counter', 0).animate({
-                        Counter: $(this).text()
-                    }, {
-                        duration: 4000,
-                        easing: 'swing',
-                        step: function (now) {
-                            $(this).text(Math.ceil(now));
-                        }
-                    });
-                });
-                animated = true;
-            }
+  $(window).scroll(function () {
+    if (!animationStarted) {
+      var currentY = $(this).scrollTop();
+      var mobileFirst = $("#mobile-first").offset().top;
+      var solution = $("#solution").offset().top;
+      var mobileStartLoc = $("#non-mobile-friendly-mobile-start-animation").offset().top
+      
+      // Desktop
+      if (!$(window).width() > 600) {
+        if (currentY >= mobileFirst && currentY <= solution) {
+          startAnimation();
+          animationStarted = true;
         }
-
-    });
+      } else {
+        if (currentY >= (mobileStartLoc - 600) && (currentY <= solution)) {
+          startAnimation();
+          animationStarted = true;
+        }
+      }
+    }
+  });
 });
 
 

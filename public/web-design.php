@@ -95,9 +95,9 @@
 								<li>
 									<a class="page-scroll" href="#start-site">Start Your Site</a>
 								</li>
-								<li>
+								<!-- <li>
 									<a class="page-scroll" href="#pricing">Pricing</a>
-								</li>
+								</li> -->
 
 							</ul>
 						</li>
@@ -218,7 +218,7 @@
 				<div class="row last-row" id="non-mobile-friendly">
 					<div class="col-md-4 col-md-offset-1" id="percentage-stat">
 						<p>
-							<em><span class="enlarged-stat"><span class="count">46</span>%</span> </em>
+							<em><span class="enlarged-stat"><span class="count hide-me-keep-space">46</span>%</span> </em>
 						</p>
 						<p id="font-switch">
 							<em>of people say they have intentionally not returned to a website which is not mobile friendly!</em>
@@ -243,7 +243,7 @@
 				<div class="row last-row" id="non-mobile-friendly">
 					<div class="col-md-4 col-md-offset-1" id="percentage-stat">
 						<p>
-							<em><span class="enlarged-stat"><span class="count">57</span>%</span> </em>
+							<em><span class="enlarged-stat"><span class="count hide-me-keep-space">57</span>%</span> </em>
 						</p>
 						<p id="font-switch">
 							<em>of people abandon websites that take more than 3 seconds to load!</em>
@@ -546,7 +546,7 @@
 					</div>
 			</section>
 
-			<section class="container-fluid larger-container" id="pricing">
+			<!-- <section class="container-fluid larger-container" id="pricing">
 				<h2>Professional Websites - Affordable Prices</h2>
 				<div class="row">
 					<div class="col-sm-4 equal-height">
@@ -605,7 +605,7 @@
 						</p>
 					</div>
 				</div>
-			</section>
+			</section> -->
 
 			<?php
 			include 'generic/footer.php';

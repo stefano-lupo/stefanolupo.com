@@ -147,7 +147,7 @@
 							My main goal was to design a site which was as unintrusive as possible, allowing the photographs to shine. This was done through use a gentle background texture which worked in harmony with a <span id="phil-lilac">soft lilac</span>.
 						</p>
 						<hr>
-						<a href="http://www.pmninteriordesign.com" target="_blank">
+						<a href="http://www.pmninteriordesign.stefanolupo.com" target="_blank">
 						<button class="right hvr-grow">
 							View Site
 						</button> </a>

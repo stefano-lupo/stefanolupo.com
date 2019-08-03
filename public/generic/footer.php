@@ -199,7 +199,7 @@ echo '			<footer class="container-fluid">
 
 							<p>
 
-								<a class="no-decoration" href="mailto:webdesign@stefanolupo.com" target="_top"><i class="fa fa-fw fa-envelope-o btn-social btn-outline"></i>webdesign@stefanolupo.tech</a>
+								<a class="no-decoration" href="mailto:webdesign@stefanolupo.com" target="_top"><i class="fa fa-fw fa-envelope-o btn-social btn-outline"></i>webdesign@stefanolupo.com</a>
 
 							</p>
 

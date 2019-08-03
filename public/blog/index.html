@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Stefano Lupo Tech">
-<meta property="og:url" content="http://stefanolupo.tech/blog/index.html">
+<meta property="og:url" content="http://stefanolupo.com/blog/index.html">
 <meta property="og:site_name" content="Stefano Lupo Tech">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
@@ -44,7 +44,7 @@
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a class="main-nav-link" href="http://stefanolupo.tech">Home</a>
+          <a class="main-nav-link" href="http://stefanolupo.com">Home</a>
         
           <a class="main-nav-link" href="/blog/archives">Archives</a>
         
@@ -54,7 +54,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://stefanolupo.tech/blog"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://stefanolupo.com/blog"></form>
       </div>
     </div>
   </div>
@@ -107,7 +107,7 @@
    
 </script>
 
-<h3 id="Checkout-the-live-demo-on-my-Home-Page"><a href="#Checkout-the-live-demo-on-my-Home-Page" class="headerlink" title="Checkout the live demo on my Home Page!"></a>Checkout the live demo on my <a href="http://www.stefanolupo.tech#game-of-life" target="_blank" rel="external">Home Page!</a></h3><p>I was sitting in a lecture the other day when the lecturers screen saver appeared on the projector. It immediately drew all of our attention as it was a live simulation of <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank" rel="external">John Conway’s Game of Life</a>. I had read and watched videos about this topic before and it is quite an interesting simulation. It acts as a model for population evolves over time and given the right inputs (or not!) it can produce some fascinating results for such a simple concept. I first heard about it from the same place I hear most of the interesting facts about the world, from Mr Michael Stevens aka <a href="https://www.youtube.com/user/Vsauce" target="_blank" rel="external">Vsauce</a>. If you haven’t heard of Vsauce you should definitely check out his YouTube channel. He makes extremely interesting videos on a huge variety of topics ranging from science and math to philosophy and psychology and his content is pretty widely accepted as some of the best on YouTube in that space. </p>
+<h3 id="Checkout-the-live-demo-on-my-Home-Page"><a href="#Checkout-the-live-demo-on-my-Home-Page" class="headerlink" title="Checkout the live demo on my Home Page!"></a>Checkout the live demo on my <a href="http://www.stefanolupo.com#game-of-life" target="_blank" rel="external">Home Page!</a></h3><p>I was sitting in a lecture the other day when the lecturers screen saver appeared on the projector. It immediately drew all of our attention as it was a live simulation of <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank" rel="external">John Conway’s Game of Life</a>. I had read and watched videos about this topic before and it is quite an interesting simulation. It acts as a model for population evolves over time and given the right inputs (or not!) it can produce some fascinating results for such a simple concept. I first heard about it from the same place I hear most of the interesting facts about the world, from Mr Michael Stevens aka <a href="https://www.youtube.com/user/Vsauce" target="_blank" rel="external">Vsauce</a>. If you haven’t heard of Vsauce you should definitely check out his YouTube channel. He makes extremely interesting videos on a huge variety of topics ranging from science and math to philosophy and psychology and his content is pretty widely accepted as some of the best on YouTube in that space. </p>
 <p>Here is a quick snippet from the video where he mentions it (~90 seconds and it <em>should</em> start from the right point!)</p>
 <div style="float: none;
     clear: both;
@@ -181,7 +181,7 @@
 <h2 id="The-Cell-Class"><a href="#The-Cell-Class" class="headerlink" title="The Cell Class"></a>The Cell Class</h2><p>Almost there, just a super basic class to represent our <code>Cell</code>s. The only interesting thing about this Cell class is the concept of “colour-aging”. As discussed, I thought it would be nice to have some visual feedback on how long a certain cell had been around for. So the cells start out with a <code>blue</code> value of 255 (fully blue) and a <code>red</code> value of 0 (no red). On each tick a cell survives, we remove <code>COLOUR_STEP</code> from it’s <code>blue</code> value and add <code>COLOUR_STEP</code> to it’s red value. This allows the colour of the cells to change over time based on how many generations they have been alive for.</p>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">    <span class="built_in">boolean</span> alive;</div><div class="line">    <span class="built_in">int</span> <span class="built_in">red</span>;</div><div class="line">    <span class="built_in">int</span> <span class="built_in">blue</span>;</div><div class="line"></div><div class="line">    <span class="comment">// This controls how fast the cells "colour-age"</span></div><div class="line">    <span class="keyword">final</span> <span class="keyword">static</span> <span class="built_in">int</span> COLOUR_STEP = <span class="number">2</span>;</div><div class="line"></div><div class="line">    Cell() &#123;</div><div class="line">        alive = <span class="keyword">false</span>;</div><div class="line">        <span class="built_in">red</span> = <span class="number">0</span>;</div><div class="line">        <span class="built_in">blue</span> = <span class="number">255</span>;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="comment">// Draws the cell with the appropriate "colour-age" at the appropriate position</span></div><div class="line">    <span class="keyword">void</span> drawCell(<span class="built_in">int</span> row, <span class="built_in">int</span> col) &#123;</div><div class="line">        <span class="keyword">if</span> (alive) &#123;</div><div class="line">            <span class="built_in">int</span> x = row*SQUARE_SIZE;</div><div class="line">            <span class="built_in">int</span> y = col*SQUARE_SIZE;</div><div class="line">            <span class="built_in">fill</span>(<span class="built_in">red</span>, <span class="number">0</span>, <span class="built_in">blue</span>);</div><div class="line">            <span class="built_in">rect</span>(x, y, SQUARE_SIZE, SQUARE_SIZE);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="comment">// Kill off the cell and set its "colour-age" back to fully blue</span></div><div class="line">    <span class="keyword">void</span> kill() &#123;</div><div class="line">        <span class="keyword">this</span>.alive = <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">this</span>.<span class="built_in">red</span> = <span class="number">0</span>;</div><div class="line">        <span class="keyword">this</span>.<span class="built_in">blue</span> = <span class="number">255</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// Bring the cell back to life</span></div><div class="line">    <span class="keyword">void</span> create() &#123;</div><div class="line">        <span class="keyword">this</span>.alive = <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// Age the cell from blue to red for each tick they survive.</span></div><div class="line">    <span class="keyword">void</span> age() &#123;</div><div class="line">        <span class="keyword">if</span> (<span class="built_in">blue</span> &gt; <span class="number">20</span>) &#123;</div><div class="line">            <span class="keyword">this</span>.<span class="built_in">blue</span> -= COLOUR_STEP;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (<span class="built_in">red</span> &lt; <span class="number">255</span>) &#123;</div><div class="line">            <span class="keyword">this</span>.<span class="built_in">red</span> += COLOUR_STEP;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h1 id="Give-it-a-go"><a href="#Give-it-a-go" class="headerlink" title="Give it a go!"></a>Give it a go!</h1><p>That’s it! Now we have our own Conway’s Game of Life. I’m sure this is nothing new and that there is a tonne of them already written in Processing, but I just decided to write my own for fun! Only after I built it in Processing did I realise I could use processing.js to run it in a browser!</p>
-<p>Feel free to play around with the simulator on <a href="http://stefanolupo.tech#game-of-life">my homepage</a>.<br>Thanks for reading! </p>
+<p>Feel free to play around with the simulator on <a href="http://stefanolupo.com#game-of-life">my homepage</a>.<br>Thanks for reading! </p>
 
 <script type="text/javascript">
       var processingInstance;
@@ -206,9 +206,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://stefanolupo.tech/blog/2017/10/17/GameOfLife/" data-id="cj967jv4s0000blqjlm08fpks" class="article-share-link">Share</a>
+      <a data-url="http://stefanolupo.com/blog/2017/10/17/GameOfLife/" data-id="cjyvuavpq0004ln8qh6z1d923" class="article-share-link">Share</a>
       
-        <a href="http://stefanolupo.tech/blog/2017/10/17/GameOfLife/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://stefanolupo.com/blog/2017/10/17/GameOfLife/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Processing-Java-Processing-js-John-Conway-s-Game-Of-Life/">Processing Java Processing.js John Conway's Game Of Life</a></li></ul>
@@ -327,9 +327,9 @@ $(<span class="string">"#send"</span>).submit(<span class="function"><span class
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://stefanolupo.tech/blog/2017/09/19/Airport-Web-Sockets/" data-id="cj8pvoers000016qj80zyuev9" class="article-share-link">Share</a>
+      <a data-url="http://stefanolupo.com/blog/2017/09/19/Airport-Web-Sockets/" data-id="cjyvuavpk0000ln8q7ay5irjn" class="article-share-link">Share</a>
       
-        <a href="http://stefanolupo.tech/blog/2017/09/19/Airport-Web-Sockets/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://stefanolupo.com/blog/2017/09/19/Airport-Web-Sockets/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/WebSockets-Node-Javascript-SSH-Raspberry-Pi/">WebSockets Node Javascript SSH Raspberry Pi</a></li></ul>
@@ -392,9 +392,9 @@ $(<span class="string">"#send"</span>).submit(<span class="function"><span class
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://stefanolupo.tech/blog/2017/09/02/hexagonPatioTable/" data-id="cj73tscie0000o0qj3hxt0vne" class="article-share-link">Share</a>
+      <a data-url="http://stefanolupo.com/blog/2017/09/02/hexagonPatioTable/" data-id="cjyvuavpo0001ln8qn2t1dxe4" class="article-share-link">Share</a>
       
-        <a href="http://stefanolupo.tech/blog/2017/09/02/hexagonPatioTable/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://stefanolupo.com/blog/2017/09/02/hexagonPatioTable/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Woodworking-Octagonal-Patio-Table-DIY-Steve-Ramsey/">Woodworking Octagonal Patio Table DIY Steve Ramsey</a></li></ul>
@@ -461,7 +461,7 @@ $(<span class="string">"#send"</span>).submit(<span class="function"><span class
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Stefano Lupo<br>
+      &copy; 2019 Stefano Lupo<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
@@ -469,7 +469,7 @@ $(<span class="string">"#send"</span>).submit(<span class="function"><span class
     </div>
     <nav id="mobile-nav">
   
-    <a href="http://stefanolupo.tech" class="mobile-nav-link">Home</a>
+    <a href="http://stefanolupo.com" class="mobile-nav-link">Home</a>
   
     <a href="/blog/archives" class="mobile-nav-link">Archives</a>
   

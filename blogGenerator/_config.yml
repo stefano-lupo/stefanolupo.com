@@ -12,7 +12,7 @@ timezone: UTC
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://stefanolupo.tech/blog
+url: http://stefanolupo.com/blog
 root: /blog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -76,6 +76,7 @@ theme: landscape
 
 # Disqus
 disqus_shortname: stefanolupo-tech
+disqus_enabled: true
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

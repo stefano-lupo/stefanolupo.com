@@ -33,7 +33,7 @@ tags: Processing Java Processing.js John Conway's Game Of Life
 </script>
 {% endraw %}
 
-### Checkout the live demo on my [Home Page!](http://www.stefanolupo.tech#game-of-life)
+### Checkout the live demo on my [Home Page!](http://www.stefanolupo.com#game-of-life)
 
 I was sitting in a lecture the other day when the lecturers screen saver appeared on the projector. It immediately drew all of our attention as it was a live simulation of [John Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). I had read and watched videos about this topic before and it is quite an interesting simulation. It acts as a model for population evolves over time and given the right inputs (or not!) it can produce some fascinating results for such a simple concept. I first heard about it from the same place I hear most of the interesting facts about the world, from Mr Michael Stevens aka [Vsauce](https://www.youtube.com/user/Vsauce). If you haven't heard of Vsauce you should definitely check out his YouTube channel. He makes extremely interesting videos on a huge variety of topics ranging from science and math to philosophy and psychology and his content is pretty widely accepted as some of the best on YouTube in that space. 
 
@@ -347,7 +347,7 @@ Almost there, just a super basic class to represent our `Cell`s. The only intere
 # Give it a go!
 That's it! Now we have our own Conway's Game of Life. I'm sure this is nothing new and that there is a tonne of them already written in Processing, but I just decided to write my own for fun! Only after I built it in Processing did I realise I could use processing.js to run it in a browser!
 
-Feel free to play around with the simulator on [my homepage](http://stefanolupo.tech#game-of-life).
+Feel free to play around with the simulator on [my homepage](http://stefanolupo.com#game-of-life).
 Thanks for reading! 
 
 
